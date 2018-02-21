@@ -2,11 +2,12 @@ import serial
 import time
 from xbee import XBee
 import sys
-
-
+import Make_Alphabet
 
 usb_location='/dev/ttyUSB'
 location_count=0
+
+
 while 1:
     try:
         serial_port = serial.Serial(usb_location+str(location_count), 9600)
@@ -16,6 +17,13 @@ while 1:
         if (location_count > 10):
             print("Error no USB Connected")
             sys.exit()
+print("Hello! Welcome to ILearns!")
+mode=input("Enter 1 for READ Mode , Enter 2 for SETUP --- ")
+if(mode==2):
+     """ Alphabet Creator"""
+
+alphabet=Make_Alphabet.get_Alphabet()
+
 
 def print_data(data):
     """
@@ -24,12 +32,9 @@ def print_data(data):
     only argument is the data contained within the
     frame.
     """
-    input_Signal=str(data['rf_data'])
+    input_Signal=str(data['rf_data'][2:12])
+    print(alphabet[input_Signal])
 
-    if '35021CA912' in input_Signal:
-        print('A')
-    elif '35021C9C84' in input_Signal:
-        print('B')
 
 
 
