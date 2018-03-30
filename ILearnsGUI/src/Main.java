@@ -109,7 +109,7 @@ public class Main extends PApplet{
     } public void load_Game_Menu() {
         BufferedReader reader;
         String line;
-        reader = createReader("/home/alexlazar/Desktop/iLearns/ILearnsGUI/Python Setup/output.txt");
+        reader = createReader("Python Setup/output.txt");
 
 
         clear();
