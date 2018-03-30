@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="jl1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JLayer1.0.1/jl1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/XBJL-1.2.1/xbee-java-library-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ReceiveDataPollingSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ReceiveDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ReceiveModemStatusSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/SendBroadcastDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/SendDataAsyncSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/SendDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/cellular/ReceiveSMSSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/cellular/SendSMSSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/coap/ReceiveCoAPDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/coap/SendCoAPDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/explicit/ReceiveExplicitDataPollingSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/explicit/ReceiveExplicitDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/explicit/SendBroadcastExplicitDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/explicit/SendExplicitDataAsyncSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/explicit/SendExplicitDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/ConnectToEchoServerSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/KnockKnockSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/ReceiveIPDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/ReceiveIPv6DataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/SendIPDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/SendIPv6DataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ip/SendUDPDataSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/configuration/ConnectToAccessPointSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/configuration/ManageCommonParametersSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/configuration/ResetModuleSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/configuration/SetAndGetParametersSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/io/IOSamplingSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/io/LocalADCSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/io/LocalDIOSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/io/RemoteADCSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/io/RemoteDIOSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/network/DiscoverDevicesSample/src" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/library/src/main/java" />
+      <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/library/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
