@@ -3,9 +3,10 @@ import javazoom.jl.player.Player;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
+
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.BufferedReader;
 import java.io.IOException;
 
 
@@ -153,7 +154,7 @@ public class Main extends PApplet{
             int x=750;
             for(char c :charArray){
                 text(c,x,480);
-                x+=300;
+                x+=500;
             }
 
         }

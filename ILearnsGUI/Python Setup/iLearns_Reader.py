@@ -22,6 +22,7 @@ output_File = open('output.txt','a')
 while 1:
     try:
         serial_port = serial.Serial(usb_location+str(location_count), 9600)
+
         break
     except:
         location_count+=1

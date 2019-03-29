@@ -15,6 +15,7 @@ This file is read line by line and is in the format of
 """
 File = open('Alphabet_Codes.txt','r+')          #Opens file containing KEYS
 alphabet_File=File.read()                       #Stores contents in a string
+File.close()
 alphabet_Array=[]                               #This array will be used later to store the contents so they can easily be moved into the dictionary
 alphabet={}                                     #Dictionary containing <KEY> <VALUE> pairs
 
@@ -33,11 +34,13 @@ def add_Letter(data,current_alphabet):      #Allows user to input new TAGS
        print("TAG already in alphabet")
        return
     else:
+        File = open('Alphabet_Codes.txt', 'a')  # Opens file containing KEYS
         x = input("What would you like to assign this TAG too? - ")
         File.write(data +'\n')
         File.write(x +'\n')
         print("TAG Created!")
         print("Scan TAG you would like to create")
+        File.close()
         return
 
 def get_Alphabet():                                          # Creates and returns final dictionary of TAGS
