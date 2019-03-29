@@ -1,19 +1,28 @@
 import serial
 import Make_Alphabet
 import sys
+import os
+import platform
 alphabet=Make_Alphabet.get_Alphabet()       # Sets alphabet to a dictionary of <KEY> <INFO> returned by get_Alphabet
 output_File_Clear = open('output.txt','w').close()
 output_File = open('output.txt','a')
 portNum=0
-while 1:
-    try:
-        ser = serial.Serial('/dev/ttyUSB'+str(portNum), 9600)
-        break
-    except:
-        portNum+=1
-        if (portNum > 10):
-            print("Error no USB Connected")                                     #Looping to find port with XBee connection
-            sys.exit()
+print(platform.system())
+if platform.system()=='Linux':
+    while 1:
+        try:
+            ser = serial.Serial('/dev/ttyUSB'+str(portNum), 9600)
+            break
+        except:
+            portNum+=1
+            if (portNum > 10):
+                print("Error no USB Connected")          #Looping to find port with XBee connection
+                sys.exit()
+if platform.system() is 'win64' or platform.system() is 'win32':
+    """
+    TODO: Write code to read from windows port
+    """
+
 print("Hello! Welcome to ILearns!")
 
 mode=int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))

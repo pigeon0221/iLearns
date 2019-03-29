@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9d03600-1e33-4eeb-b76f-f20da4eb7e05" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Setup/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python Setup/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILearnsGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ILearnsGUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Setup/.idea/Python Setup.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/.idea/Python Setup.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Setup/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python Setup/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Setup/Make_Alphabet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/Make_Alphabet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python Setup/iLearns_Reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/iLearns_Reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python Setup/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ILearnsGUI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILearnsGUI/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Setup/rfid.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/rfid.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +37,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="6" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -187,12 +178,12 @@
       <workItem from="1551469980095" duration="2424000" />
       <workItem from="1552318494450" duration="1044000" />
       <workItem from="1553802049401" duration="1906000" />
-      <workItem from="1553884241895" duration="692000" />
+      <workItem from="1553884241895" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6727000" />
+    <option name="totallyTimeSpent" value="7220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -261,7 +252,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
