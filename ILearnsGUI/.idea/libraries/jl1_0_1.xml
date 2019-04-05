@@ -4,7 +4,6 @@
       <root url="jar://$PROJECT_DIR$/JLayer1.0.1/jl1.0.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/XBJL-1.2.1/xbee-java-library-1.2.1.jar!/" />
     </CLASSES>
-    <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ReceiveDataPollingSample/src" />
       <root url="file://$PROJECT_DIR$/XBeeJavaLibrary-master/examples/communication/ReceiveDataSample/src" />
