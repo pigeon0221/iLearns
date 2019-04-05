@@ -1,86 +1,66 @@
-"""
-Written by Alex Lazar
-Reads XBee inputs and outputs respective info
-Each TAG contains a pair <KEY><VALUE>
-<KEY> is the HEX value stored in the TAG
-<VALUE> is what the user inputs to be associated wih the TAG
-Also allows for TAGS to be assigned to whatever the user wants
-"""
-import code
-
 import serial
-import time
-from xbee import XBee
 import sys
 import platform
-operatingSystem = platform.system();
-usb_location = None
-if(operatingSystem=="Linux"):
-    usb_location='/dev/ttyUSB'                  # Linux USB ports are organized by path
-else:
-    usb_location='COM'
-location_count=0                            # Start at location 0 and loop through first 10 until we find a connection
-output_File_Clear = open('TicTacToe.txt','w').close()
-output_File = open('TicTacToe.txt','a')
-while 1:
-    try:
-        serial_port = serial.Serial(usb_location+str(location_count), 9600)
+import serial.tools.list_ports as port_list
 
-        break
-    except:
-        location_count+=1
-        if (location_count > 10):
-            print("Error no USB Connected")                                     #Looping to find port with XBee connection
-            sys.exit()
+open('output.txt', 'w').close()
+output_File = open('output.txt', 'a')
+dictionary = open('dictionary.txt', 'a')
+rfidValue={}
+print(platform.system())
+ser=None
 
+if platform.system() == 'Linux':
+    portNum = 0
+    while 1:
+        try:
+            ser = serial.Serial('/dev/ttyUSB' + str(portNum), 9600)
+            break
+        except:
+            portNum += 1
+            if (portNum > 10):
+                print("Error no USB Connected")  # Looping to find port with XBee connection
+                sys.exit()
 
+if platform.system() is 'Windows':
 
-print("Hello! Welcome to ILearns Demo!")
+    ports= list(port_list.comports())
+    for p in ports:
+        if('USB' in p.description):
+            ser = serial.Serial(p.device, 9600)
 
-mode=int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
-# READ Mode outputs information when an input is recieved
-# SETUP Mode allows the user to input new tags and there information.
-#
-# if(mode == 1):
-#     print("ILearns RFID Input:")
-# if(mode  == 2):                 #Allows user to clear dictionary
-#     clear=int(input("Enter 1 to erase all current TAGs in dictionary , Enter 0 to keep current TAGs - "))
-#     if(clear == 1):
-#         Make_Alphabet.clear_Dictionary()
-#         print("Dictionary Cleared")
-#     print("Scan TAG you would like to create")
-# def print_data(data):
-#     """
-#     This method is called whenever data is received
-#     from the associated XBee device. Its first and
-#     only argument is the data contained within the
-#     frame.
-#     """
-#
-#     input_Signal = str(data['rf_data'][2:12])           # Extracts hex key from TAG input
-#     if(mode == 1):
-#         if(input_Signal not in alphabet):
-#             print("TAG not in dictionary")
-#         print(alphabet[input_Signal])                   # Prints associated INFO to respective tag
-#         output_File = open('output.txt', 'a')
-#         output_File.write(alphabet[input_Signal])
-#         output_File.close()
-#     if(mode == 2):
-#         Make_Alphabet.add_Letter(input_Signal,alphabet) # Adds to alphabet
-#
-#
-#
-#
-#
-# xbee = XBee(serial_port, callback=print_data)
-# while True:
-#     try:
-#         time.sleep(0.001)                           # Monitors for inputs
-#     except KeyboardInterrupt:
-#         break
-#
-# xbee.halt()
-# serial_port.close()
-#
-# def get_Info(code):                          #Used in EXE to return input from Java input
-#     return alphabet[code]
+mode = int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
+clear = None
+if(mode == 1):
+    lines = None;
+    list=[]
+    with open('dictionary.txt') as f:
+        lines = f.readlines()
+    for l in lines:
+        if(len(l[:len(l)-1])!=0):
+            list.append(l[:len(l)-1])
+    for x in range(0,len(list),2):
+        rfidValue[list[x]]=list[x+1]
+if(mode == 2):
+    clear = int(input("Enter 1 to clear dictionary , Enter 2 to add new keys --- "))
+while True:
+    data = ser.readline()
+    # READ Mode outputs information when an input is recieved
+    # SETUP Mode allows the user to input new tags and there information.
+    if data:
+        if (mode == 1):
+            key = str(data, 'utf-8').split(':')[1]
+            key=(key[:len(key)-1])
+            print("Recieved KEY = " + key)
+            print("This key = "+rfidValue[key])
+        if (mode == 2):
+            if(clear==1):
+                open('dictionary.txt', 'w').close()
+            if(clear==2):
+                dictionary=open('dictionary.txt', 'a')
+                dictionary.write(str(data, 'utf-8').split(':')[1]+'\n')
+                dictionary.close()
+                dictionary = open('dictionary.txt', 'a')
+                value=str(input("What do you want this to be?")+'\n')
+                dictionary.write(value)
+                dictionary.close()
