@@ -19,6 +19,7 @@ if platform.system()=='Linux':
                 print("Error no USB Connected")          #Looping to find port with XBee connection
                 sys.exit()
 if platform.system() is 'win64' or platform.system() is 'win32':
+    
     """
     TODO: Write code to read from windows port
     """
