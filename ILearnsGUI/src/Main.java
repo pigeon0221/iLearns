@@ -78,7 +78,7 @@ public class Main extends PApplet{
         image(background,0,0,displayWidth,displayHeight);
         PFont font = createFont("SqueakyChalkSound.ttf",200);
         textFont(font);
-        
+
         text(spot1,pos1x,pos1y);
         text(spot2,pos2x,pos2y);
         text(spot3,pos3x,pos3y);
