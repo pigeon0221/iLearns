@@ -1,6 +1,7 @@
 import serial
 import sys
 import platform
+import serial.tools.list_ports as port_list
 
 open('output.txt', 'w').close()
 output_File = open('output.txt', 'a')
@@ -22,12 +23,11 @@ if platform.system() == 'Linux':
                 sys.exit()
 
 if platform.system() is 'Windows':
-    import setup.tools.list_ports as port_list
 
     ports= list(port_list.comports())
     for p in ports:
         if('USB' in p.description):
-            ser = serial.Serial(p.description, 9600)
+            ser = serial.Serial(p.device, 9600)
 
 mode = int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
 clear = None
