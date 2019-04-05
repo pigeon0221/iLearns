@@ -16,28 +16,31 @@ import platform
 operatingSystem = platform.system();
 usb_location = None
 if(operatingSystem=="Linux"):
+    location_count = 0  # Start at location 0 and loop through first 10 until we find a connection
     usb_location='/dev/ttyUSB'                  # Linux USB ports are organized by path
+    while 1:
+        try:
+            ser = serial.Serial('/dev/ttyUSB'+str(location_count), 9600)
+            break
+        except:
+            location_count += 1
+            if (location_count > 10):
+                print("Error no USB Connected")  # Looping to find port with XBee connection
+                sys.exit()
 else:
-    usb_location='COM'
-location_count=0                            # Start at location 0 and loop through first 10 until we find a connection
+    import serial.tools.list_ports as port_list
+
+    ports = list(port_list.comports())
+    for p in ports:
+        if("USB" in p.description):
+            usb_location=p.device
 output_File_Clear = open('TicTacToe.txt','w').close()
 output_File = open('TicTacToe.txt','a')
-while 1:
-    try:
-        serial_port = serial.Serial(usb_location+str(location_count), 9600)
-
-        break
-    except:
-        location_count+=1
-        if (location_count > 10):
-            print("Error no USB Connected")                                     #Looping to find port with XBee connection
-            sys.exit()
-
-
-
+serial_port = serial.Serial(usb_location, 9600)
+print("Connected on port "+usb_location)
 print("Hello! Welcome to ILearns Demo!")
 
-mode=int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
+#mode=int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
 # READ Mode outputs information when an input is recieved
 # SETUP Mode allows the user to input new tags and there information.
 #
@@ -49,7 +52,8 @@ mode=int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
 #         Make_Alphabet.clear_Dictionary()
 #         print("Dictionary Cleared")
 #     print("Scan TAG you would like to create")
-# def print_data(data):
+def print_data(data):
+    print(data)
 #     """
 #     This method is called whenever data is received
 #     from the associated XBee device. Its first and
@@ -72,15 +76,16 @@ mode=int(input("Enter 1 for READ Mode , Enter 2 for SETUP --- "))
 #
 #
 #
-# xbee = XBee(serial_port, callback=print_data)
-# while True:
-#     try:
-#         time.sleep(0.001)                           # Monitors for inputs
-#     except KeyboardInterrupt:
-#         break
-#
-# xbee.halt()
-# serial_port.close()
-#
+xbee = XBee(serial_port, callback=print_data)
+while True:
+    try:
+        time.sleep(0.001)                           # Monitors for inputs
+    except KeyboardInterrupt:
+        print(print_data())
+        break
+
+xbee.halt()
+serial_port.close()
+
 # def get_Info(code):                          #Used in EXE to return input from Java input
 #     return alphabet[code]
