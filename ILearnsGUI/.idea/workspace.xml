@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9d03600-1e33-4eeb-b76f-f20da4eb7e05" name="Default" comment="Reader code update">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/core.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/core1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/core1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jl1_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jl1_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d9d03600-1e33-4eeb-b76f-f20da4eb7e05" name="Default" comment="tick tack toe board created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ILearnsGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ILearnsGUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ILearnsGUI/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -25,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="979">
-              <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
+            <state relative-caret-position="104">
+              <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,32 +31,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Conference/conferenceRFID.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/black-and-white-board.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ILearnsGUI.iml">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -105,15 +80,15 @@
         <option value="$PROJECT_DIR$/Python Setup/output.txt" />
         <option value="$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt" />
         <option value="$PROJECT_DIR$/Conference/conferenceRFID.py" />
-        <option value="$PROJECT_DIR$/output.txt" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/output.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="1920" />
-    <option name="height" value="990" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,17 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ILearnsGUI" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ILearnsGUI" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -149,15 +113,26 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ILearnsGUI" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ILearnsGUI" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554500608959" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554590988421" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -219,6 +194,7 @@
       <workItem from="1553884241895" duration="1185000" />
       <workItem from="1554300944111" duration="3220000" />
       <workItem from="1554490470256" duration="1183000" />
+      <workItem from="1554584177534" duration="6236000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Test Commit&quot;">
       <created>1554490518445</created>
@@ -234,17 +210,31 @@
       <option name="project" value="LOCAL" />
       <updated>1554491043801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="tick tack toe board created">
+      <created>1554500495537</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554500495537</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tick tack toe board created">
+      <created>1554500621597</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554500621597</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19011000" />
+    <option name="totallyTimeSpent" value="25592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29971388" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3040057" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -284,7 +274,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Test Commit&quot;" />
     <MESSAGE value="Reader code update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reader code update" />
+    <MESSAGE value="tick tack toe board created" />
+    <option name="LAST_COMMIT_MESSAGE" value="tick tack toe board created" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/GUI.java" />
@@ -293,16 +284,6 @@
     <entry file="file://$PROJECT_DIR$/XBJL-1.2.1/examples/communication/ReceiveDataSample/src/com/digi/xbee/api/receivedata/MyDataReceiveListener.java" />
     <entry file="file://$PROJECT_DIR$/XBJL-1.2.1/examples/communication/ReceiveDataSample/src/com/digi/xbee/api/receivedata/MainApp.java" />
     <entry file="jar://$USER_HOME$/processing-3.3.6/core/library/core.jar!/processing/core/PApplet.class" />
-    <entry file="file://$PROJECT_DIR$/Python Setup/output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python Setup/iLearns_Reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-834">
@@ -324,25 +305,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Conference/conferenceRFID.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Setup/output.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="979">
-          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -386,7 +377,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>11</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
