@@ -100,11 +100,13 @@ public class Main extends PApplet{
         PImage exit;
         exit = loadImage("Exit.png");
         image(exit,exit_Button_X,exit_Button_Y,150,100);
+        PImage logo;
+        logo = loadImage("logo1.png");
+        image(logo,0,0,600,200);
         PFont mono;
         mono = createFont("SqueakyChalkSound.ttf",100);
         textFont(mono);
         fill(255);
-        text("iLearns",0,100);
         text("Click here to begin",width/3,height/2-100);
 
     } public void load_Game_Menu() {
@@ -128,7 +130,9 @@ public class Main extends PApplet{
         mono = createFont("SqueakyChalkSound.ttf", 100);
         textFont(mono);
         fill(255);
-        text("iLearns", 0, 100);
+        PImage logo;
+        logo = loadImage("logo1.png");
+        image(logo,0,0,600,200);
 
 
         PImage dog;
@@ -154,7 +158,7 @@ public class Main extends PApplet{
             int x=750;
             for(char c :charArray){
                 text(c,x,480);
-                x+=500;
+                x+=300;
             }
 
         }

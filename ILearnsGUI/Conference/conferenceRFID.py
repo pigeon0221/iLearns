@@ -4,12 +4,12 @@ import platform
 import serial.tools.list_ports as port_list
 
 open('output.txt', 'w').close()
-output_File = open('output.txt', 'a')
+output_File = open('output.txt', 'w').close()
 dictionary = open('dictionary.txt', 'a')
 rfidValue={}
 print(platform.system())
 ser=None
-
+marker = 'X'
 if platform.system() == 'Linux':
     portNum = 0
     while 1:
@@ -49,10 +49,17 @@ while True:
     # SETUP Mode allows the user to input new tags and there information.
     if data:
         if (mode == 1):
+            output=open('output.txt', 'a')
             key = str(data, 'utf-8').split(':')[1]
             key=(key[:len(key)-1])
             print("Recieved KEY = " + key)
             print("This key = "+rfidValue[key])
+            output.write(rfidValue[key]+marker)
+            output.close()
+            if(marker=='X'):
+                marker='O'
+            else:
+                marker='X'
         if (mode == 2):
             if(clear==1):
                 open('dictionary.txt', 'w').close()
