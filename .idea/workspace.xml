@@ -1,26 +1,406 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Xbee.py" afterPath="" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Added Windows reader code">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Jars.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/iLearns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/iLearns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/libraries/core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/libraries/jl1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/ILearnsGUI.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/CHANGES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/build-unix.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/build-win32.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/Converter$PrintWriterProgressListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/Converter$ProgressListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/Converter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/RiffFile$RiffChunkHeader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/RiffFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile$WaveFileSample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile$WaveFormat_Chunk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile$WaveFormat_ChunkData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/WaveFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/WaveFileObuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/jlc$jlcArgs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/converter/jlc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/BitReserve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Bitstream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/BitstreamErrors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/BitstreamException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Control.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Crc16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Decoder$Params.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Decoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/DecoderErrors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/DecoderException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Equalizer$EQFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Equalizer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/FrameDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Header.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/InputStreamSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerError.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerErrors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerHook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/JavaLayerUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$Subband.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$SubbandLayer1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$SubbandLayer1IntensityStereo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder$SubbandLayer1Stereo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder$SubbandLayer2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder$SubbandLayer2IntensityStereo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder$SubbandLayer2Stereo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$III_side_info_t.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$SBI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$Sftable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$gr_info_s.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$temporaire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder$temporaire2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/LayerIIIDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Obuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/OutputChannels.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/SampleBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/Source.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/SynthesisFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/au2lin.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/huffcodetab.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/l3reorder.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/lin2au.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/decoder/sfd.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/AudioDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/AudioDeviceBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/AudioDeviceFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/FactoryRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/JavaSoundAudioDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/JavaSoundAudioDeviceFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/NullAudioDevice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/PlayerApplet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/advanced/AdvancedPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/advanced/PlaybackEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/advanced/PlaybackListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/advanced/jlap$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/advanced/jlap$InfoListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/advanced/jlap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/classes/javazoom/jl/player/jlp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/allclasses-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/allclasses-noframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/constant-values.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/deprecated-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/Converter.PrintWriterProgressListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/Converter.ProgressListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/Converter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/RiffFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/WaveFile.WaveFileSample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/WaveFile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/WaveFileObuffer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/jlc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/converter/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Bitstream.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/BitstreamErrors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/BitstreamException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Control.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Crc16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Decoder.Params.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Decoder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/DecoderErrors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/DecoderException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Equalizer.EQFunction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Equalizer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/FrameDecoder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/InputStreamSource.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/JavaLayerError.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/JavaLayerErrors.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/JavaLayerException.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/JavaLayerHook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/JavaLayerUtils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Manager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Obuffer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/OutputChannels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/SampleBuffer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/Source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/decoder/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/AudioDevice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/AudioDeviceBase.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/AudioDeviceFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/FactoryRegistry.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/JavaSoundAudioDevice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/JavaSoundAudioDeviceFactory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/NullAudioDevice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/Player.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/PlayerApplet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/AdvancedPlayer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/PlaybackEvent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/PlaybackListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/jlap.InfoListener.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/jlap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/advanced/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/jlp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/package-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/javazoom/jl/player/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/overview-frame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/overview-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/package-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/packages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/resources/inherit.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/jl1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/playerapplet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/setEnvAnt.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/converter/Converter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/converter/RiffFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/converter/WaveFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/converter/WaveFileObuffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/converter/jlc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/BitReserve.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Bitstream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/BitstreamErrors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/BitstreamException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Control.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Crc16.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Decoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/DecoderErrors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/DecoderException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Equalizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/FrameDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Header.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/InputStreamSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerError.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerErrors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerHook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/JavaLayerUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/LayerIDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/LayerIIDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/LayerIIIDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Obuffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/OutputChannels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/SampleBuffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/Source.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/SynthesisFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/au2lin.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/huffcodetab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/l3reorder.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/lin2au.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/decoder/sfd.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/AudioDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/AudioDeviceBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/AudioDeviceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/FactoryRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/JavaSoundAudioDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/JavaSoundAudioDeviceFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/NullAudioDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/PlayerApplet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/advanced/AdvancedPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/advanced/PlaybackEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/advanced/PlaybackListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/advanced/jlap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/src/javazoom/jl/player/jlp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/srctest/AllTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/srctest/javazoom/jl/decoder/BitstreamTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/srctest/javazoom/jl/player/jlpTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/JLayer1.0.1/srctest/test.mp3.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Kids_Music.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/.idea/Python Setup.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/Alphabet_Codes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/Make_Alphabet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/Test/Test.pyde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/iLearns_Reader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/backend/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/backend/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/backend/digimesh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/backend/ieee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/backend/zigbee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/digimesh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/frame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/helpers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/helpers/dispatch/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/helpers/dispatch/dispatch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/ieee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/python2to3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/thread/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/thread/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/thread/digimesh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/thread/ieee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/thread/zigbee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/tornado/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/tornado/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/tornado/digimesh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/tornado/ieee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/tornado/zigbee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/Python Setup/xbee/zigbee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/SqueakyChalkSound.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/button.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/cartoonB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/cartoonB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/dog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/dog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/out/production/ILearnsGUI/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/sun.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ILearnsGUI/sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/iLearns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iLearns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/black-and-white-board.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/button.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/demoTTBoard.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/demoTTBoard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/dog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/sun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iLearns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iLearns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="iLearns_Reader.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/iLearns_Reader.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="166">
+              <caret line="153" column="13" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="initializer##0;class#Main#0" />
+                <element signature="e#1017#1153#0" />
+                <element signature="e#1186#1230#0" />
+                <element signature="e#1260#1304#0" />
+                <element signature="e#1316#1393#0" />
+                <element signature="e#1399#1565#0" />
+                <element signature="e#1446#1484#0" />
+                <element signature="e#1514#1558#0" />
+                <element signature="e#1571#1634#0" />
+                <element signature="e#1640#2032#0" />
+                <element signature="e#1691#1874#0" />
+                <element signature="e#1907#1951#0" />
+                <element signature="e#1981#2025#0" />
+                <element signature="e#2038#2157#0" />
+                <element signature="e#2615#2653#1" />
+                <element signature="e#2681#2721#1" />
+                <element signature="e#2749#2820#1" />
+                <element signature="e#2954#3050#1" />
+                <element signature="e#3227#3323#1" />
+                <element signature="e#3342#3782#0" />
+                <element signature="e#3454#3688#1" />
+                <element signature="e#3217#3342#0" />
+                <element signature="e#3375#3419#0" />
+                <element signature="e#3788#4668#0" />
+                <element signature="e#3161#3554#1" />
+                <element signature="e#3252#3291#1" />
+                <element signature="e#3318#3486#1" />
+                <element signature="e#3361#3408#1" />
+                <element signature="e#3492#3544#1" />
+                <element signature="e#4154#4547#1" />
+                <element signature="e#4245#4284#1" />
+                <element signature="e#4311#4479#1" />
+                <element signature="e#4354#4401#1" />
+                <element signature="e#4485#4537#1" />
+                <element signature="e#3566#3881#0" />
+                <element signature="e#3709#3730#0" />
+                <element signature="e#5245#5428#0" />
+                <element signature="e#5630#6243#0" />
+                <element signature="e#5752#6081#1" />
+                <element signature="e#6001#6111#1" />
+                <element signature="e#6374#6542#0" />
+                <element signature="e#6459#6491#1" />
+                <element signature="e#6586#6636#0" />
+                <element signature="e#6659#6709#0" />
+                <element signature="e#6791#6971#0" />
+                <element signature="e#4360#4586#0" />
+                <element signature="e#6481#7816#0" />
+                <element signature="e#4742#4773#1" />
+                <element signature="e#4807#4914#1" />
+                <element signature="e#4948#5055#1" />
+                <element signature="e#5080#5173#1" />
+                <element signature="e#5199#5285#1" />
+                <element signature="e#5316#5359#1" />
+                <element signature="e#6546#6758#1" />
+                <element signature="e#6573#6612#1" />
+                <element signature="e#6698#6738#1" />
+                <element signature="e#6730#6771#1" />
+                <element signature="e#6950#6997#1" />
+                <element signature="e#6852#6891#1" />
+                <element signature="e#5548#5680#0" />
+                <element signature="e#2821#2888#1" />
+                <element signature="e#3193#3243#1" />
+                <element signature="e#3275#3339#1" />
+                <element signature="e#6239#6323#1" />
+                <element signature="e#6363#6447#1" />
+                <element signature="e#6484#6535#1" />
+                <element signature="e#7797#7881#1" />
+                <element signature="e#7919#8004#1" />
+                <element signature="method#loadGame#0;class#Main#0" />
+                <element signature="e#3568#3617#0" />
+                <element signature="e#3640#3709#0" />
+                <element signature="e#3737#3928#1" />
+                <element signature="e#3847#3917#1" />
+                <element signature="class#Music#0;class#Main#0" />
+                <element signature="initializer##0;class#Music#0;class#Main#0" />
+                <element signature="e#1277#1371#0" />
+                <element signature="e#1404#1456#0" />
+                <element signature="e#1566#1618#0" />
+                <element signature="method#run#0;class#Music#0;class#Main#0" />
+                <element signature="e#1695#1741#0" />
+                <element signature="e#1771#1823#0" />
+                <element signature="method#run#1;class#Music#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -35,39 +415,48 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_</find>
+      <find>backbut</find>
+      <find>backgrou</find>
+      <find>next</find>
+      <find>nextw</find>
+      <find>returnto</find>
+      <find>return</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/xbee/RFID_Reader.py" />
+        <option value="$PROJECT_DIR$/ILearnsGUI/Python Setup/rfid.py" />
+        <option value="$PROJECT_DIR$/ILearnsGUI/Python Setup/iLearns_Reader.py" />
+        <option value="$PROJECT_DIR$/ILearnsGUI/Conference/conferenceRFID.py" />
+        <option value="$PROJECT_DIR$/ILearnsGUI/dictionary.txt" />
+        <option value="$PROJECT_DIR$/ILearnsGUI/output.txt" />
+        <option value="$PROJECT_DIR$/ILearnsGUI/conferenceRFID.py" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-7" />
-    <option name="width" value="3200" />
-    <option name="height" value="1678" />
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1017" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -78,17 +467,45 @@
               <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
               <item name="iLearns" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iLearns" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iLearns" type="462c0819:PsiDirectoryNode" />
+              <item name="Jars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iLearns" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.245" />
+    <property name="project.structure.side.proportion" value="0.4076539" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ILearnsGUI" />
+      <recent name="$PROJECT_DIR$/ILearnsGUI/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,8 +519,66 @@
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="iLearns" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="conferenceRFID (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="iLearns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ILearnsGUI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ILearnsGUI/conferenceRFID.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="conferenceRFID" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="iLearns" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ILearnsGUI/Conference" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ILearnsGUI/Conference/conferenceRFID.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,61 +587,418 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519227868824</updated>
+      <workItem from="1555095388701" duration="907000" />
+      <workItem from="1555096838316" duration="2366000" />
+      <workItem from="1559243942643" duration="124000" />
+      <workItem from="1559244128467" duration="15861000" />
     </task>
+    <task id="LOCAL-00001" summary="Added Conference folder">
+      <created>1554490104247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554490104248</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added Conference folder">
+      <created>1554490234151</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554490234151</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Conference folder">
+      <created>1554490349464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1554490349464</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added Windows reader code">
+      <created>1554494118592</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554494118592</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19258000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-7" width="3200" height="1678" extended-state="6" />
+    <frame x="1920" y="-2" width="1920" height="1017" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2620064" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32995495" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32882884" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39864865" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32995495" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32995495" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="R Graphics" order="5" />
+      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="SciView" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Palette" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="10" />
+      <window_info anchor="right" id="Palette&#9;" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="12" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25641027" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.32906976" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="right" id="SciView" order="0" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="R Graphics" order="6" />
+      <window_info anchor="right" id="R Packages" order="7" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Conference folder" />
+    <MESSAGE value="Added Windows reader code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Windows reader code" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>120</line>
+          <properties class="Main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>111</line>
+          <properties class="Main" method="draw">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>381</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>338</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>212</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>292</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>310</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>291</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>252</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xbee/RFID_Reader.py">
+    <entry file="file://$PROJECT_DIR$/xbee/RFID_Reader.py" />
+    <entry file="file://$PROJECT_DIR$/iLearns_Reader.py" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/Conference/TicTacToe.txt" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/src/conferenceRFID.py" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/Conference/conferenceRFID.py" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/Python Setup/rfid.py" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/output.txt" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/Python Setup/iLearns_Reader.py" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/dictionary.txt" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/demoTTBoard.jpeg" />
+    <entry file="file://$PROJECT_DIR$/ILearnsGUI/conferenceRFID.py" />
+    <entry file="file://$PROJECT_DIR$/Images/LibraryName.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Jars/core.jar!/processing/core/PApplet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="169">
+          <caret line="232" column="30" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iLearns_Reader.py">
+    <entry file="file://$PROJECT_DIR$/Libraries/.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/adad.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/asdfff.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/aa.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/test1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/alex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="153" column="13" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="initializer##0;class#Main#0" />
+            <element signature="e#1017#1153#0" />
+            <element signature="e#1186#1230#0" />
+            <element signature="e#1260#1304#0" />
+            <element signature="e#1316#1393#0" />
+            <element signature="e#1399#1565#0" />
+            <element signature="e#1446#1484#0" />
+            <element signature="e#1514#1558#0" />
+            <element signature="e#1571#1634#0" />
+            <element signature="e#1640#2032#0" />
+            <element signature="e#1691#1874#0" />
+            <element signature="e#1907#1951#0" />
+            <element signature="e#1981#2025#0" />
+            <element signature="e#2038#2157#0" />
+            <element signature="e#2615#2653#1" />
+            <element signature="e#2681#2721#1" />
+            <element signature="e#2749#2820#1" />
+            <element signature="e#2954#3050#1" />
+            <element signature="e#3227#3323#1" />
+            <element signature="e#3342#3782#0" />
+            <element signature="e#3454#3688#1" />
+            <element signature="e#3217#3342#0" />
+            <element signature="e#3375#3419#0" />
+            <element signature="e#3788#4668#0" />
+            <element signature="e#3161#3554#1" />
+            <element signature="e#3252#3291#1" />
+            <element signature="e#3318#3486#1" />
+            <element signature="e#3361#3408#1" />
+            <element signature="e#3492#3544#1" />
+            <element signature="e#4154#4547#1" />
+            <element signature="e#4245#4284#1" />
+            <element signature="e#4311#4479#1" />
+            <element signature="e#4354#4401#1" />
+            <element signature="e#4485#4537#1" />
+            <element signature="e#3566#3881#0" />
+            <element signature="e#3709#3730#0" />
+            <element signature="e#5245#5428#0" />
+            <element signature="e#5630#6243#0" />
+            <element signature="e#5752#6081#1" />
+            <element signature="e#6001#6111#1" />
+            <element signature="e#6374#6542#0" />
+            <element signature="e#6459#6491#1" />
+            <element signature="e#6586#6636#0" />
+            <element signature="e#6659#6709#0" />
+            <element signature="e#6791#6971#0" />
+            <element signature="e#4360#4586#0" />
+            <element signature="e#6481#7816#0" />
+            <element signature="e#4742#4773#1" />
+            <element signature="e#4807#4914#1" />
+            <element signature="e#4948#5055#1" />
+            <element signature="e#5080#5173#1" />
+            <element signature="e#5199#5285#1" />
+            <element signature="e#5316#5359#1" />
+            <element signature="e#6546#6758#1" />
+            <element signature="e#6573#6612#1" />
+            <element signature="e#6698#6738#1" />
+            <element signature="e#6730#6771#1" />
+            <element signature="e#6950#6997#1" />
+            <element signature="e#6852#6891#1" />
+            <element signature="e#5548#5680#0" />
+            <element signature="e#2821#2888#1" />
+            <element signature="e#3193#3243#1" />
+            <element signature="e#3275#3339#1" />
+            <element signature="e#6239#6323#1" />
+            <element signature="e#6363#6447#1" />
+            <element signature="e#6484#6535#1" />
+            <element signature="e#7797#7881#1" />
+            <element signature="e#7919#8004#1" />
+            <element signature="method#loadGame#0;class#Main#0" />
+            <element signature="e#3568#3617#0" />
+            <element signature="e#3640#3709#0" />
+            <element signature="e#3737#3928#1" />
+            <element signature="e#3847#3917#1" />
+            <element signature="class#Music#0;class#Main#0" />
+            <element signature="initializer##0;class#Music#0;class#Main#0" />
+            <element signature="e#1277#1371#0" />
+            <element signature="e#1404#1456#0" />
+            <element signature="e#1566#1618#0" />
+            <element signature="method#run#0;class#Music#0;class#Main#0" />
+            <element signature="e#1695#1741#0" />
+            <element signature="e#1771#1823#0" />
+            <element signature="method#run#1;class#Music#0;class#Main#0" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>iLearns</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4076539" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>core</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.4076539" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
