@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Added Windows reader code">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Jars.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/core.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/iLearns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/iLearns.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
@@ -283,22 +279,13 @@
       <change beforePath="$PROJECT_DIR$/../ILearnsGUI/src/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ILearnsGUI/sun.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ILearnsGUI/sun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/iLearns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iLearns.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/black-and-white-board.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/button.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/demoTTBoard.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/demoTTBoard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/dog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/sun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iLearns.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iLearns.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/nextWordButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/Images/nextWordButton.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libraries/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Setup/Make_Alphabet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/Make_Alphabet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Setup/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python Setup/rfid.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Setup/rfid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main$Music.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main$Music.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -313,11 +300,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="153" column="13" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
+            <state relative-caret-position="261">
+              <caret line="436" column="17" selection-start-line="436" selection-start-column="17" selection-end-line="436" selection-end-column="17" />
               <folding>
                 <element signature="initializer##0;class#Main#0" />
                 <element signature="e#1017#1153#0" />
@@ -327,36 +314,46 @@
                 <element signature="e#1399#1565#0" />
                 <element signature="e#1446#1484#0" />
                 <element signature="e#1514#1558#0" />
-                <element signature="e#1571#1634#0" />
+                <element signature="e#1972#2047#0" />
+                <element signature="e#2039#2069#0" />
                 <element signature="e#1640#2032#0" />
                 <element signature="e#1691#1874#0" />
                 <element signature="e#1907#1951#0" />
                 <element signature="e#1981#2025#0" />
                 <element signature="e#2038#2157#0" />
+                <element signature="e#3321#3397#0" />
+                <element signature="e#3430#3474#0" />
+                <element signature="e#2574#3057#0" />
                 <element signature="e#2615#2653#1" />
                 <element signature="e#2681#2721#1" />
                 <element signature="e#2749#2820#1" />
+                <element signature="e#2853#2929#1" />
                 <element signature="e#2954#3050#1" />
                 <element signature="e#3227#3323#1" />
-                <element signature="e#3342#3782#0" />
+                <element signature="e#3578#3612#1" />
+                <element signature="e#4436#4485#0" />
+                <element signature="e#4508#4577#0" />
+                <element signature="e#6067#6345#1" />
+                <element signature="e#6369#6861#0" />
                 <element signature="e#3454#3688#1" />
                 <element signature="e#3217#3342#0" />
                 <element signature="e#3375#3419#0" />
-                <element signature="e#3788#4668#0" />
-                <element signature="e#3161#3554#1" />
-                <element signature="e#3252#3291#1" />
-                <element signature="e#3318#3486#1" />
-                <element signature="e#3361#3408#1" />
-                <element signature="e#3492#3544#1" />
-                <element signature="e#4154#4547#1" />
+                <element signature="e#6867#7759#0" />
+                <element signature="e#6918#7311#1" />
+                <element signature="e#7009#7048#1" />
+                <element signature="e#7075#7243#1" />
+                <element signature="e#7118#7165#1" />
+                <element signature="e#7249#7301#1" />
+                <element signature="e#7336#7753#1" />
                 <element signature="e#4245#4284#1" />
-                <element signature="e#4311#4479#1" />
-                <element signature="e#4354#4401#1" />
+                <element signature="e#7493#7677#1" />
+                <element signature="e#7540#7587#1" />
                 <element signature="e#4485#4537#1" />
                 <element signature="e#3566#3881#0" />
                 <element signature="e#3709#3730#0" />
+                <element signature="e#8165#8456#0" />
                 <element signature="e#5245#5428#0" />
-                <element signature="e#5630#6243#0" />
+                <element signature="e#8651#9635#0" />
                 <element signature="e#5752#6081#1" />
                 <element signature="e#6001#6111#1" />
                 <element signature="e#6374#6542#0" />
@@ -365,33 +362,44 @@
                 <element signature="e#6659#6709#0" />
                 <element signature="e#6791#6971#0" />
                 <element signature="e#4360#4586#0" />
-                <element signature="e#6481#7816#0" />
                 <element signature="e#4742#4773#1" />
-                <element signature="e#4807#4914#1" />
-                <element signature="e#4948#5055#1" />
-                <element signature="e#5080#5173#1" />
-                <element signature="e#5199#5285#1" />
-                <element signature="e#5316#5359#1" />
-                <element signature="e#6546#6758#1" />
+                <element signature="e#10083#10169#1" />
+                <element signature="e#10200#10243#1" />
+                <element signature="e#10266#10416#1" />
+                <element signature="e#10329#10331#0" />
+                <element signature="e#10298#10405#1" />
+                <element signature="e#10795#11089#1" />
+                <element signature="e#10937#11149#1" />
                 <element signature="e#6573#6612#1" />
                 <element signature="e#6698#6738#1" />
                 <element signature="e#6730#6771#1" />
                 <element signature="e#6950#6997#1" />
                 <element signature="e#6852#6891#1" />
+                <element signature="e#11607#11654#1" />
+                <element signature="e#11675#12041#1" />
+                <element signature="e#11770#11922#0" />
+                <element signature="e#11955#12023#0" />
+                <element signature="e#12476#12544#0" />
+                <element signature="e#12788#12856#0" />
+                <element signature="e#12668#12669#0" expanded="true" />
+                <element signature="e#12696#12697#0" expanded="true" />
+                <element signature="e#12451#12534#1" />
+                <element signature="e#12578#12664#1" />
                 <element signature="e#5548#5680#0" />
+                <element signature="e#12860#13071#0" />
                 <element signature="e#2821#2888#1" />
-                <element signature="e#3193#3243#1" />
+                <element signature="e#13151#13202#1" />
                 <element signature="e#3275#3339#1" />
-                <element signature="e#6239#6323#1" />
+                <element signature="e#14030#14031#0" expanded="true" />
                 <element signature="e#6363#6447#1" />
                 <element signature="e#6484#6535#1" />
-                <element signature="e#7797#7881#1" />
+                <element signature="e#13680#13764#1" />
                 <element signature="e#7919#8004#1" />
                 <element signature="method#loadGame#0;class#Main#0" />
-                <element signature="e#3568#3617#0" />
+                <element signature="e#14968#15017#0" />
                 <element signature="e#3640#3709#0" />
-                <element signature="e#3737#3928#1" />
-                <element signature="e#3847#3917#1" />
+                <element signature="e#15137#15337#1" />
+                <element signature="e#15252#15326#1" />
                 <element signature="class#Music#0;class#Main#0" />
                 <element signature="initializer##0;class#Music#0;class#Main#0" />
                 <element signature="e#1277#1371#0" />
@@ -404,6 +412,26 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Images/backWordButton.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Images/nextWordButton.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python Setup/output.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -424,6 +452,20 @@
       <find>nextw</find>
       <find>returnto</find>
       <find>return</find>
+      <find>overpla</find>
+      <find>level</find>
+      <find>reader</find>
+      <find>.close</find>
+      <find>write</find>
+      <find>writ</find>
+      <find>writer</find>
+      <find>writer&quot;Python Setup/output.txt&quot;);</find>
+      <find>300</find>
+      <find>mp3</find>
+      <find>prev</find>
+      <find>oversel</find>
+      <find>nextwo</find>
+      <find>overre</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -445,6 +487,8 @@
         <option value="$PROJECT_DIR$/ILearnsGUI/output.txt" />
         <option value="$PROJECT_DIR$/ILearnsGUI/conferenceRFID.py" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/Python Setup/output.txt" />
+        <option value="$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt" />
       </list>
     </option>
   </component>
@@ -452,7 +496,7 @@
     <option name="x" value="1920" />
     <option name="y" value="-2" />
     <option name="width" value="1920" />
-    <option name="height" value="1017" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -475,7 +519,17 @@
             <path>
               <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
               <item name="iLearns" type="462c0819:PsiDirectoryNode" />
-              <item name="Jars" type="462c0819:PsiDirectoryNode" />
+              <item name="Libraries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iLearns" type="462c0819:PsiDirectoryNode" />
+              <item name="Music" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iLearns" type="462c0819:PsiDirectoryNode" />
+              <item name="Python Setup" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iLearns" type="b2602c69:ProjectViewProjectNode" />
@@ -590,7 +644,7 @@
       <workItem from="1555095388701" duration="907000" />
       <workItem from="1555096838316" duration="2366000" />
       <workItem from="1559243942643" duration="124000" />
-      <workItem from="1559244128467" duration="15861000" />
+      <workItem from="1559244128467" duration="27857000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -624,7 +678,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19258000" />
+    <option name="totallyTimeSpent" value="31254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -640,7 +694,7 @@
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2620064" />
-      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" weight="0.2497332" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -715,7 +769,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>120</line>
+          <line>140</line>
           <properties class="Main">
             <option name="EMULATED" value="true" />
           </properties>
@@ -723,59 +777,47 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>111</line>
-          <properties class="Main" method="draw">
+          <line>342</line>
+          <properties class="Main" method="mousePressed">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>381</line>
+          <line>498</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>338</line>
+          <line>455</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>212</line>
+          <line>269</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>292</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>162</line>
+          <line>219</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>310</line>
+          <line>188</line>
           <properties />
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>291</line>
+          <line>480</line>
           <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>252</line>
-          <properties />
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -794,13 +836,6 @@
     <entry file="file://$PROJECT_DIR$/ILearnsGUI/conferenceRFID.py" />
     <entry file="file://$PROJECT_DIR$/Images/LibraryName.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/Jars/core.jar!/processing/core/PApplet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="232" column="30" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Libraries/.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -836,10 +871,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Python Setup/rfid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Setup/iLearns_Reader.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Jars/core.jar!/processing/core/PApplet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="232" column="30" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/backWordButton.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Setup/output.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/nextWordButton.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="153" column="13" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
+        <state relative-caret-position="261">
+          <caret line="436" column="17" selection-start-line="436" selection-start-column="17" selection-end-line="436" selection-end-column="17" />
           <folding>
             <element signature="initializer##0;class#Main#0" />
             <element signature="e#1017#1153#0" />
@@ -849,36 +908,46 @@
             <element signature="e#1399#1565#0" />
             <element signature="e#1446#1484#0" />
             <element signature="e#1514#1558#0" />
-            <element signature="e#1571#1634#0" />
+            <element signature="e#1972#2047#0" />
+            <element signature="e#2039#2069#0" />
             <element signature="e#1640#2032#0" />
             <element signature="e#1691#1874#0" />
             <element signature="e#1907#1951#0" />
             <element signature="e#1981#2025#0" />
             <element signature="e#2038#2157#0" />
+            <element signature="e#3321#3397#0" />
+            <element signature="e#3430#3474#0" />
+            <element signature="e#2574#3057#0" />
             <element signature="e#2615#2653#1" />
             <element signature="e#2681#2721#1" />
             <element signature="e#2749#2820#1" />
+            <element signature="e#2853#2929#1" />
             <element signature="e#2954#3050#1" />
             <element signature="e#3227#3323#1" />
-            <element signature="e#3342#3782#0" />
+            <element signature="e#3578#3612#1" />
+            <element signature="e#4436#4485#0" />
+            <element signature="e#4508#4577#0" />
+            <element signature="e#6067#6345#1" />
+            <element signature="e#6369#6861#0" />
             <element signature="e#3454#3688#1" />
             <element signature="e#3217#3342#0" />
             <element signature="e#3375#3419#0" />
-            <element signature="e#3788#4668#0" />
-            <element signature="e#3161#3554#1" />
-            <element signature="e#3252#3291#1" />
-            <element signature="e#3318#3486#1" />
-            <element signature="e#3361#3408#1" />
-            <element signature="e#3492#3544#1" />
-            <element signature="e#4154#4547#1" />
+            <element signature="e#6867#7759#0" />
+            <element signature="e#6918#7311#1" />
+            <element signature="e#7009#7048#1" />
+            <element signature="e#7075#7243#1" />
+            <element signature="e#7118#7165#1" />
+            <element signature="e#7249#7301#1" />
+            <element signature="e#7336#7753#1" />
             <element signature="e#4245#4284#1" />
-            <element signature="e#4311#4479#1" />
-            <element signature="e#4354#4401#1" />
+            <element signature="e#7493#7677#1" />
+            <element signature="e#7540#7587#1" />
             <element signature="e#4485#4537#1" />
             <element signature="e#3566#3881#0" />
             <element signature="e#3709#3730#0" />
+            <element signature="e#8165#8456#0" />
             <element signature="e#5245#5428#0" />
-            <element signature="e#5630#6243#0" />
+            <element signature="e#8651#9635#0" />
             <element signature="e#5752#6081#1" />
             <element signature="e#6001#6111#1" />
             <element signature="e#6374#6542#0" />
@@ -887,33 +956,44 @@
             <element signature="e#6659#6709#0" />
             <element signature="e#6791#6971#0" />
             <element signature="e#4360#4586#0" />
-            <element signature="e#6481#7816#0" />
             <element signature="e#4742#4773#1" />
-            <element signature="e#4807#4914#1" />
-            <element signature="e#4948#5055#1" />
-            <element signature="e#5080#5173#1" />
-            <element signature="e#5199#5285#1" />
-            <element signature="e#5316#5359#1" />
-            <element signature="e#6546#6758#1" />
+            <element signature="e#10083#10169#1" />
+            <element signature="e#10200#10243#1" />
+            <element signature="e#10266#10416#1" />
+            <element signature="e#10329#10331#0" />
+            <element signature="e#10298#10405#1" />
+            <element signature="e#10795#11089#1" />
+            <element signature="e#10937#11149#1" />
             <element signature="e#6573#6612#1" />
             <element signature="e#6698#6738#1" />
             <element signature="e#6730#6771#1" />
             <element signature="e#6950#6997#1" />
             <element signature="e#6852#6891#1" />
+            <element signature="e#11607#11654#1" />
+            <element signature="e#11675#12041#1" />
+            <element signature="e#11770#11922#0" />
+            <element signature="e#11955#12023#0" />
+            <element signature="e#12476#12544#0" />
+            <element signature="e#12788#12856#0" />
+            <element signature="e#12668#12669#0" expanded="true" />
+            <element signature="e#12696#12697#0" expanded="true" />
+            <element signature="e#12451#12534#1" />
+            <element signature="e#12578#12664#1" />
             <element signature="e#5548#5680#0" />
+            <element signature="e#12860#13071#0" />
             <element signature="e#2821#2888#1" />
-            <element signature="e#3193#3243#1" />
+            <element signature="e#13151#13202#1" />
             <element signature="e#3275#3339#1" />
-            <element signature="e#6239#6323#1" />
+            <element signature="e#14030#14031#0" expanded="true" />
             <element signature="e#6363#6447#1" />
             <element signature="e#6484#6535#1" />
-            <element signature="e#7797#7881#1" />
+            <element signature="e#13680#13764#1" />
             <element signature="e#7919#8004#1" />
             <element signature="method#loadGame#0;class#Main#0" />
-            <element signature="e#3568#3617#0" />
+            <element signature="e#14968#15017#0" />
             <element signature="e#3640#3709#0" />
-            <element signature="e#3737#3928#1" />
-            <element signature="e#3847#3917#1" />
+            <element signature="e#15137#15337#1" />
+            <element signature="e#15252#15326#1" />
             <element signature="class#Music#0;class#Main#0" />
             <element signature="initializer##0;class#Music#0;class#Main#0" />
             <element signature="e#1277#1371#0" />
@@ -926,6 +1006,12 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libraries/ethan.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python Setup/Alphabet_Codes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

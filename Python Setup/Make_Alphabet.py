@@ -35,9 +35,9 @@ def add_Letter(data,current_alphabet):      #Allows user to input new TAGS
        return
     else:
         File = open('Alphabet_Codes.txt', 'a')  # Opens file containing KEYS
-        x = input("What would you like to assign this TAG too? - ")
-        File.write(data +'\n')
-        File.write(x +'\n')
+        x = raw_input("What would you like to assign this TAG too? - ")
+        File.write(data+'\n')
+        File.write(x+'\n')
         print("TAG Created!")
         print("Scan TAG you would like to create")
         File.close()

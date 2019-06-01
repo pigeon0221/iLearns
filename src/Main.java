@@ -32,6 +32,11 @@ public class Main extends PApplet {
     private PImage wordBox;
     private PImage nextWord;
     private PImage lastWord;
+    private PImage correct;
+    private PImage incorrect;
+    private PImage reset;
+
+
     private FileInputStream fileInputStream;
     private boolean fileCreated = false;
     private boolean fileSelected = false;
@@ -41,7 +46,9 @@ public class Main extends PApplet {
     private String fileName;
     private JFileChooser chooser = null;
     private ArrayList<String> gameWords = new ArrayList<>();
-    private int level = 0;
+    private int level = 1;
+    private boolean playedSound = false;
+
 
     {
         try {
@@ -70,8 +77,10 @@ public class Main extends PApplet {
     }
 
     private static void stopMusic() {
-        music.pause();
-
+       // music.pause();
+        /*
+        TODO: Make music stop when pause is clicked
+         */
     }
 
     private static void playClickSound() {
@@ -106,6 +115,17 @@ public class Main extends PApplet {
         wordBox = loadImage("Images/wordBox.png");
         nextWord = loadImage("Images/nextWordButton.png");
         lastWord = loadImage("Images/backWordButton.png");
+        correct = loadImage("Images/goodjob.png");
+        incorrect = loadImage("Images/incorrect.png");
+        reset = loadImage("Images/reset.png");
+
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("Python Setup/output.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        writer.close();
 
     }
 
@@ -149,10 +169,46 @@ public class Main extends PApplet {
         drawBackgroundElements();
         fill(255);
         textSize(50);
-        text("Level "+level+1,width/2-100,70);
+        text("Level "+level,width/2-100,70);
         image(wordBox,200,height/2-200,1520,300);
         image(lastWord, 50, height/2-200, 100, 100);
         image(nextWord, 1770, height/2-200, 100, 100);
+        image(reset,width/2-100,700,200,200);
+        BufferedReader reader;
+        String line;
+        reader = createReader("Python Setup/output.txt");
+
+        try {
+            line = reader.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            line = null;
+        }
+        if(line!=null){
+            textSize(80);
+            text(line,690,525);
+
+            if(gameWords.get(level-1).length()==line.length() && gameWords.get(level-1).equals(line) && playedSound == false){
+                image(correct,width/2-150,200,300,300);
+//            try {
+//                playedSound=true;
+//                text(gameWords.get(level-1),690,525);
+//                FileInputStream fileInputStream = new FileInputStream("Music/yayEffect.mp3");
+//                Player player = new Player(fileInputStream);
+//                player.play();
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//            } catch (JavaLayerException e) {
+//                e.printStackTrace();
+//            }
+            }
+            //TODO: Bug in method that plays sound before displaying full output
+            if(gameWords.get(level-1).length()==line.length() && !gameWords.get(level-1).equals(line) && playedSound == false){
+                image(incorrect,width/2-150,200,300,300);
+//
+            }
+        }
+
 
     }
 
@@ -193,10 +249,10 @@ public class Main extends PApplet {
                 return;
             }
             if (key == 8) {
-                if (input.length() == 0) {
+                if (wordInput.length() == 0) {
                     return;
                 }
-                wordInput = input.substring(0, input.length() - 1);
+                wordInput = wordInput.substring(0, wordInput.length() - 1);
             } else {
                 wordInput = wordInput + key;
             }
@@ -290,20 +346,6 @@ public class Main extends PApplet {
         if (overExit()) {
             exit();
         }
-        if (overSelectLibrary()) {
-            begin = false;
-            selectLibrary = true;
-            createLibrary = false;
-        }
-        if (overCreateLibrary()) {
-            begin = false;
-            selectLibrary = false;
-            createLibrary = true;
-        }
-        if (overPlay()) {
-            System.out.println("Playing Music");
-
-        }
         if (overPause()) {
             System.out.println("Stopping Music");
             stopMusic();
@@ -311,14 +353,34 @@ public class Main extends PApplet {
         if (overBackButton()) {
             returnToHomePage();
         }
-        if (overNextButton()){
-            if(input==""){
-                return;
+        if (overPlay()) {
+            System.out.println("Playing Music");
+            //
+            //TODO: Plays music when play button is clicked
+            //
+        }
+        if(begin) {
+            if (overSelectLibrary()) {
+                begin = false;
+                selectLibrary = true;
+                createLibrary = false;
             }
-            begin = false;
-            selectLibrary = false;
-            createLibrary = false;
-            createLibraryPage2 = true;
+            if (overCreateLibrary()) {
+                begin = false;
+                selectLibrary = false;
+                createLibrary = true;
+            }
+        }
+        if(createLibrary) {
+            if (overNextButton()) {
+                if (input == "") {
+                    return;
+                }
+                begin = false;
+                selectLibrary = false;
+                createLibrary = false;
+                createLibraryPage2 = true;
+            }
         }
         if (onWordPage){
             if(overNextWord()){
@@ -333,6 +395,60 @@ public class Main extends PApplet {
                 returnToHomePage();
             }
         }
+        if (gamePage){
+            if(overNextLibraryWord()){
+                if(level==gameWords.size()){
+                    return;
+                }
+                else{
+                    level+=1;
+                    playedSound=false;
+                    try {
+                        PrintWriter writer = new PrintWriter("Python Setup/output.txt");
+                        writer.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+            if(overPreviousLibraryWord()){
+                if(level==1){
+                    return;
+                }
+                else{
+                    level-=1;
+                    playedSound=false;
+                    try {
+                        PrintWriter writer = new PrintWriter("Python Setup/output.txt");
+                        writer.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+            if(overResetButton()){
+                try {
+                    PrintWriter writer = new PrintWriter("Python Setup/output.txt");
+                    writer.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private boolean overResetButton() {
+        return mouseX > 865 && mouseX < 1055 && mouseY > 700 && mouseY < 900;
+    }
+
+    private boolean overPreviousLibraryWord() {
+        return mouseX > 50 && mouseX < 145 && mouseY >340  && mouseY < 435;
+    }
+
+    private boolean overNextLibraryWord() {
+        return mouseX > 1770 && mouseX < 1875 && mouseY >340  && mouseY < 435;
     }
 
     private boolean overNextButton() {
