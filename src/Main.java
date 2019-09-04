@@ -1,24 +1,21 @@
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 import processing.core.PApplet;
-import processing.core.PFont;
 import processing.core.PImage;
 
 import javax.swing.*;
 import java.io.*;
-import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 
 public class Main extends PApplet {
-    private HashMap<String,Screen> pages= new HashMap<String,Screen>();
-    private Screen currentPage;
+    public static HashMap<String, Screen> pages = new HashMap<String, Screen>();
     private static Player player;
     private static boolean onNamePage = false;
     String input = "";
     String wordInput = "";
+    private Screen currentPage;
     private int exitButtonX;
     private int exitButtonY;
     private boolean begin = true;
@@ -39,8 +36,6 @@ public class Main extends PApplet {
     private PImage correct;
     private PImage incorrect;
     private PImage reset;
-
-
     private FileInputStream fileInputStream;
     private boolean fileCreated = false;
     private boolean fileSelected = false;
@@ -71,26 +66,28 @@ public class Main extends PApplet {
     }
 
 
-
     public void settings() {
+        fullScreen();
         populatePages();
         setCurrentPage();
-        fullScreen();
+        currentPage.setVisibility(true);
         exitButtonX = displayWidth - 150;
         exitButtonY = 0;
     }
 
     private void setCurrentPage() {
-        currentPage=pages.get("HomePage");
+        currentPage = pages.get("HomePage");
     }
 
     private void populatePages() {
         Screen HomePage = new HomePage(this);
-        pages.put("HomePage",HomePage);
+        pages.put("HomePage", HomePage);
+        Screen GamePage = new GamePage(this);
+        pages.put("GamePage", GamePage);
     }
 
     public void setup() {
-        currentPage.viewable(true);
+        surface.setResizable(true);
         loadImages();
         loadPrintWriter();
 
@@ -107,7 +104,6 @@ public class Main extends PApplet {
     }
 
     private void loadImages() {
-        background = loadImage("Images/cartoonB.png");
         playButton = loadImage("Images/playButton.png");
         pauseButton = loadImage("Images/pauseButton.png");
         logo = loadImage("Images/logo.png");
@@ -124,7 +120,17 @@ public class Main extends PApplet {
     }
 
     public void draw() {
+        while (!currentPage.visibility()) {
+            for (Screen x : pages.values()) {
+                if (x.visibility()) {
+                    clear();
+                    currentPage = x;
+                    break;
+                }
+            }
+        }
         currentPage.create();
+
 //        if (begin) {
 //            StartScreen();
 //        }
@@ -163,11 +169,11 @@ public class Main extends PApplet {
         drawBackgroundElements();
         fill(255);
         textSize(50);
-        text("Level "+level,width/2-100,70);
-        image(wordBox,200,height/2-200,1520,300);
-        image(lastWord, 50, height/2-200, 100, 100);
-        image(nextWord, 1770, height/2-200, 100, 100);
-        image(reset,width/2-100,700,200,200);
+        text("Level " + level, width / 2 - 100, 70);
+        image(wordBox, 200, height / 2 - 200, 1520, 300);
+        image(lastWord, 50, height / 2 - 200, 100, 100);
+        image(nextWord, 1770, height / 2 - 200, 100, 100);
+        image(reset, width / 2 - 100, 700, 200, 200);
         BufferedReader reader;
         String line;
         reader = createReader("Python/output.txt");
@@ -178,12 +184,12 @@ public class Main extends PApplet {
             e.printStackTrace();
             line = null;
         }
-        if(line!=null){
+        if (line != null) {
             textSize(80);
-            text(line,690,525);
+            text(line, 690, 525);
 
-            if(gameWords.get(level-1).length()==line.length() && gameWords.get(level-1).equals(line) && playedSound == false){
-                image(correct,width/2-150,200,300,300);
+            if (gameWords.get(level - 1).length() == line.length() && gameWords.get(level - 1).equals(line) && playedSound == false) {
+                image(correct, width / 2 - 150, 200, 300, 300);
 //            try {
 //                playedSound=true;
 //                text(gameWords.get(level-1),690,525);
@@ -197,8 +203,8 @@ public class Main extends PApplet {
 //            }
             }
             //TODO: Bug in method that plays sound before displaying full output
-            if(gameWords.get(level-1).length()==line.length() && !gameWords.get(level-1).equals(line) && playedSound == false){
-                image(incorrect,width/2-150,200,300,300);
+            if (gameWords.get(level - 1).length() == line.length() && !gameWords.get(level - 1).equals(line) && playedSound == false) {
+                image(incorrect, width / 2 - 150, 200, 300, 300);
 //
             }
         }
@@ -209,15 +215,15 @@ public class Main extends PApplet {
     private void createLibraryPage2() {
         clear();
         drawBackgroundElements();
-        if(!fileCreated) {
+        if (!fileCreated) {
             fileName = input + ".txt";
             try {
                 writer = new PrintWriter("Libraries/" + fileName);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            fileCreated=true;
-            input="";
+            fileCreated = true;
+            input = "";
         }
         image(libraryWords, displayWidth / 2 - 200, displayHeight / 2 - 200, 400, 400);
     }
@@ -255,15 +261,14 @@ public class Main extends PApplet {
     }
 
     public void StartScreen() {
-        onNamePage=false;
-        onWordPage=false;
-        fileCreated=false;
+        onNamePage = false;
+        onWordPage = false;
+        fileCreated = false;
         drawBackgroundElements();
         image(menu, displayWidth / 2 - 200, displayHeight / 2 - 200, 400, 400);
     }
 
     private void drawBackgroundElements() {
-        image(background, 0, 0, width, height);
         drawExitButton();
         image(logo, 0, 0, 400, 150);
         image(playButton, 0, 900, 80, 80);
@@ -278,41 +283,41 @@ public class Main extends PApplet {
     }
 
     private void selectLibrary() {
-            clear();
-            drawBackgroundElements();
-            if(!fileSelected) {
-                chooser = new JFileChooser();
-                int result = chooser.showSaveDialog(null);
-                if (result == JFileChooser.CANCEL_OPTION) {
-                    System.out.println("Cancel was selected");
-                    returnToHomePage();
-                    return;
-                }
-                fileSelected=true;
+        clear();
+        drawBackgroundElements();
+        if (!fileSelected) {
+            chooser = new JFileChooser();
+            int result = chooser.showSaveDialog(null);
+            if (result == JFileChooser.CANCEL_OPTION) {
+                System.out.println("Cancel was selected");
+                returnToHomePage();
+                return;
             }
+            fileSelected = true;
+        }
 
-            File f = chooser.getSelectedFile();
+        File f = chooser.getSelectedFile();
 
-           try(BufferedReader br = new BufferedReader(new FileReader(f.getAbsolutePath()))) {
-            for(String line; (line = br.readLine()) != null; ) {
-               gameWords.add(line);
+        try (BufferedReader br = new BufferedReader(new FileReader(f.getAbsolutePath()))) {
+            for (String line; (line = br.readLine()) != null; ) {
+                gameWords.add(line);
             }
             // line is not visible here.
-            } catch (FileNotFoundException e) {
-               e.printStackTrace();
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         startGame();
     }
 
     private void startGame() {
-        fileSelected=false;
+        fileSelected = false;
         begin = false;
         selectLibrary = false;
         createLibrary = false;
         createLibraryPage2 = false;
-        gamePage=true;
+        gamePage = true;
     }
 
     public void drawExitButton() {
@@ -326,84 +331,85 @@ public class Main extends PApplet {
     public void mousePressed() {
         GameEffects.playClickSound();
         checkDirectButtons();
-        if(begin) {
-            if (overSelectLibrary()) {
-                begin = false;
-                selectLibrary = true;
-                createLibrary = false;
-            }
-            if (overCreateLibrary()) {
-                begin = false;
-                selectLibrary = false;
-                createLibrary = true;
-            }
-        }
-        if(createLibrary) {
-            if (overNextButton()) {
-                if (input == "") {
-                    return;
-                }
-                begin = false;
-                selectLibrary = false;
-                createLibrary = false;
-                createLibraryPage2 = true;
-            }
-        }
-        if (onWordPage){
-            if(overNextWord()){
-                if(wordInput==""){
-                    return;
-                }
-                writer.println(wordInput);
-                wordInput="";
-            }
-            if(overSaveLibrary()){
-                writer.close();
-                returnToHomePage();
-            }
-        }
-        if (gamePage){
-            if(overNextLibraryWord()){
-                if(level==gameWords.size()){
-                    return;
-                }
-                else{
-                    level+=1;
-                    playedSound=false;
-                    try {
-                        PrintWriter writer = new PrintWriter("Python/output.txt");
-                        writer.close();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            }
-            if(overPreviousLibraryWord()){
-                if(level==1){
-                    return;
-                }
-                else{
-                    level-=1;
-                    playedSound=false;
-                    try {
-                        PrintWriter writer = new PrintWriter("Python/output.txt");
-                        writer.close();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-            }
-            if(overResetButton()){
-                try {
-                    PrintWriter writer = new PrintWriter("Python/output.txt");
-                    writer.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        currentPage.mousePressed();
+//        if(begin) {
+//            if (overSelectLibrary()) {
+//                begin = false;
+//                selectLibrary = true;
+//                createLibrary = false;
+//            }
+//            if (overCreateLibrary()) {
+//                begin = false;
+//                selectLibrary = false;
+//                createLibrary = true;
+//            }
+//        }
+//        if(createLibrary) {
+//            if (overNextButton()) {
+//                if (input == "") {
+//                    return;
+//                }
+//                begin = false;
+//                selectLibrary = false;
+//                createLibrary = false;
+//                createLibraryPage2 = true;
+//            }
+//        }
+//        if (onWordPage){
+//            if(overNextWord()){
+//                if(wordInput==""){
+//                    return;
+//                }
+//                writer.println(wordInput);
+//                wordInput="";
+//            }
+//            if(overSaveLibrary()){
+//                writer.close();
+//                returnToHomePage();
+//            }
+//        }
+//        if (gamePage){
+//            if(overNextLibraryWord()){
+//                if(level==gameWords.size()){
+//                    return;
+//                }
+//                else{
+//                    level+=1;
+//                    playedSound=false;
+//                    try {
+//                        PrintWriter writer = new PrintWriter("Python/output.txt");
+//                        writer.close();
+//                    } catch (FileNotFoundException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//
+//            }
+//            if(overPreviousLibraryWord()){
+//                if(level==1){
+//                    return;
+//                }
+//                else{
+//                    level-=1;
+//                    playedSound=false;
+//                    try {
+//                        PrintWriter writer = new PrintWriter("Python/output.txt");
+//                        writer.close();
+//                    } catch (FileNotFoundException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//
+//            }
+//            if(overResetButton()){
+//                try {
+//                    PrintWriter writer = new PrintWriter("Python/output.txt");
+//                    writer.close();
+//                } catch (FileNotFoundException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
     }
 
     private void checkDirectButtons() {
@@ -428,11 +434,11 @@ public class Main extends PApplet {
     }
 
     private boolean overPreviousLibraryWord() {
-        return mouseX > 50 && mouseX < 145 && mouseY >340  && mouseY < 435;
+        return mouseX > 50 && mouseX < 145 && mouseY > 340 && mouseY < 435;
     }
 
     private boolean overNextLibraryWord() {
-        return mouseX > 1770 && mouseX < 1875 && mouseY >340  && mouseY < 435;
+        return mouseX > 1770 && mouseX < 1875 && mouseY > 340 && mouseY < 435;
     }
 
     private boolean overNextButton() {
@@ -441,12 +447,12 @@ public class Main extends PApplet {
 
 
     private void returnToHomePage() {
-        fileSelected=false;
+        fileSelected = false;
         begin = true;
         selectLibrary = false;
         createLibrary = false;
         createLibraryPage2 = false;
-        gamePage=false;
+        gamePage = false;
     }
 
     public boolean overExit() {
@@ -472,14 +478,14 @@ public class Main extends PApplet {
     public boolean overBackButton() {
         return mouseX > 1840 && mouseY > 900;
     }
+
     public boolean overNextWord() {
-        return mouseX > 800 && mouseX < 950 && mouseY >620  && mouseY < 690;
+        return mouseX > 800 && mouseX < 950 && mouseY > 620 && mouseY < 690;
     }
+
     public boolean overSaveLibrary() {
-        return mouseX > 970 && mouseX < 1120 && mouseY >620  && mouseY < 690;
+        return mouseX > 970 && mouseX < 1120 && mouseY > 620 && mouseY < 690;
     }
-
-
 
 
 }
