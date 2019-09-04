@@ -6,12 +6,16 @@ import processing.core.PImage;
 
 import javax.swing.*;
 import java.io.*;
+import java.util.AbstractMap;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 public class Main extends PApplet {
+    private HashMap<String,Screen> pages= new HashMap<String,Screen>();
+    private Screen currentPage;
     private static Player player;
-    private static Music music;
     private static boolean onNamePage = false;
     String input = "";
     String wordInput = "";
@@ -66,44 +70,43 @@ public class Main extends PApplet {
 
     }
 
-    private static void playMusic() {
 
-        try {
-            player.play();
-        } catch (JavaLayerException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private static void stopMusic() {
-       // music.pause();
-        /*
-        TODO: Make music stop when pause is clicked
-         */
-    }
-
-    private static void playClickSound() {
-        try {
-            FileInputStream fileInputStream = new FileInputStream("Music/button.mp3");
-            Player player = new Player(fileInputStream);
-            player.play();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (JavaLayerException e) {
-            e.printStackTrace();
-        }
-
-    }
 
     public void settings() {
+        populatePages();
+        setCurrentPage();
         fullScreen();
         exitButtonX = displayWidth - 150;
         exitButtonY = 0;
     }
 
+    private void setCurrentPage() {
+        currentPage=pages.get("HomePage");
+    }
+
+    private void populatePages() {
+        Screen HomePage = new HomePage(this);
+        pages.put("HomePage",HomePage);
+    }
+
     public void setup() {
+        currentPage.viewable(true);
+        loadImages();
+        loadPrintWriter();
+
+    }
+
+    private void loadPrintWriter() {
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter("Python/output.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        writer.close();
+    }
+
+    private void loadImages() {
         background = loadImage("Images/cartoonB.png");
         playButton = loadImage("Images/playButton.png");
         pauseButton = loadImage("Images/pauseButton.png");
@@ -118,49 +121,40 @@ public class Main extends PApplet {
         correct = loadImage("Images/goodjob.png");
         incorrect = loadImage("Images/incorrect.png");
         reset = loadImage("Images/reset.png");
-
-        PrintWriter writer = null;
-        try {
-            writer = new PrintWriter("Python Setup/output.txt");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        writer.close();
-
     }
 
     public void draw() {
-
-        if (begin) {
-            StartScreen();
-        }
-        if (selectLibrary) {
-            selectLibrary();
-        }
-        if (createLibrary) {
-            onNamePage = true;
-            createLibrary();
-        }
-        if (createLibraryPage2) {
-            onNamePage = false;
-            onWordPage = true;
-            createLibraryPage2();
-        }
-        if (onNamePage) {
-            textSize(30);
-            fill(255);
-            text(input, 810, 570);
-
-        }
-        if (onWordPage) {
-            textSize(30);
-            fill(255);
-            text(wordInput, 810, 570);
-
-        }
-        if (gamePage){
-            playGame();
-        }
+        currentPage.create();
+//        if (begin) {
+//            StartScreen();
+//        }
+//        if (selectLibrary) {
+//            selectLibrary();
+//        }
+//        if (createLibrary) {
+//            onNamePage = true;
+//            createLibrary();
+//        }
+//        if (createLibraryPage2) {
+//            onNamePage = false;
+//            onWordPage = true;
+//            createLibraryPage2();
+//        }
+//        if (onNamePage) {
+//            textSize(30);
+//            fill(255);
+//            text(input, 810, 570);
+//
+//        }
+//        if (onWordPage) {
+//            textSize(30);
+//            fill(255);
+//            text(wordInput, 810, 570);
+//
+//        }
+//        if (gamePage){
+//            playGame();
+//        }
 
     }
 
@@ -176,7 +170,7 @@ public class Main extends PApplet {
         image(reset,width/2-100,700,200,200);
         BufferedReader reader;
         String line;
-        reader = createReader("Python Setup/output.txt");
+        reader = createReader("Python/output.txt");
 
         try {
             line = reader.readLine();
@@ -229,6 +223,7 @@ public class Main extends PApplet {
     }
 
     public void keyPressed() {
+        currentPage.mousePressed();
         if (onNamePage) {
             System.out.println(keyCode);
             if (keyCode == 10 || keyCode == 16) {
@@ -265,13 +260,6 @@ public class Main extends PApplet {
         fileCreated=false;
         drawBackgroundElements();
         image(menu, displayWidth / 2 - 200, displayHeight / 2 - 200, 400, 400);
-
-//        PFont mono;
-//        mono = createFont("Fonts/SqueakyChalkSound.ttf",100);
-//        textFont(mono);
-//        fill(255);
-//        text("iLearns",0,100);
-
     }
 
     private void drawBackgroundElements() {
@@ -281,19 +269,15 @@ public class Main extends PApplet {
         image(playButton, 0, 900, 80, 80);
         image(pauseButton, 80, 900, 80, 80);
         image(backButton, 1840, 900, 80, 80);
-
     }
 
     private void createLibrary() {
         clear();
         drawBackgroundElements();
         image(libraryName, displayWidth / 2 - 200, displayHeight / 2 - 200, 400, 400);
-        
     }
 
     private void selectLibrary() {
-
-
             clear();
             drawBackgroundElements();
             if(!fileSelected) {
@@ -320,7 +304,6 @@ public class Main extends PApplet {
                e.printStackTrace();
            }
         startGame();
-
     }
 
     private void startGame() {
@@ -341,24 +324,8 @@ public class Main extends PApplet {
     }
 
     public void mousePressed() {
-        System.out.println("Mouse Click at " + mouseX + " " + mouseY);
-        playClickSound();
-        if (overExit()) {
-            exit();
-        }
-        if (overPause()) {
-            System.out.println("Stopping Music");
-            stopMusic();
-        }
-        if (overBackButton()) {
-            returnToHomePage();
-        }
-        if (overPlay()) {
-            System.out.println("Playing Music");
-            //
-            //TODO: Plays music when play button is clicked
-            //
-        }
+        GameEffects.playClickSound();
+        checkDirectButtons();
         if(begin) {
             if (overSelectLibrary()) {
                 begin = false;
@@ -404,7 +371,7 @@ public class Main extends PApplet {
                     level+=1;
                     playedSound=false;
                     try {
-                        PrintWriter writer = new PrintWriter("Python Setup/output.txt");
+                        PrintWriter writer = new PrintWriter("Python/output.txt");
                         writer.close();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -420,7 +387,7 @@ public class Main extends PApplet {
                     level-=1;
                     playedSound=false;
                     try {
-                        PrintWriter writer = new PrintWriter("Python Setup/output.txt");
+                        PrintWriter writer = new PrintWriter("Python/output.txt");
                         writer.close();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -430,12 +397,29 @@ public class Main extends PApplet {
             }
             if(overResetButton()){
                 try {
-                    PrintWriter writer = new PrintWriter("Python Setup/output.txt");
+                    PrintWriter writer = new PrintWriter("Python/output.txt");
                     writer.close();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+
+    private void checkDirectButtons() {
+        if (overExit()) {
+            exit();
+        }
+        if (overPause()) {
+            GameEffects.stopMusic();
+        }
+        if (overBackButton()) {
+            returnToHomePage();
+        }
+        if (overPlay()) {
+            //
+            //TODO: Plays music when play button is clicked
+            //
         }
     }
 
@@ -495,97 +479,7 @@ public class Main extends PApplet {
         return mouseX > 970 && mouseX < 1120 && mouseY >620  && mouseY < 690;
     }
 
-    public void loadGame() {
-        BufferedReader reader;
-        String line;
-        reader = createReader("Python Setup/output.txt");
 
-
-        clear();
-
-        PImage img;
-        img = loadImage("Images/cartoonB.png");
-        image(img, 0, 0, width, height);
-        fill(0);
-
-        rect(exitButtonX, exitButtonY, 150, 100);
-        PImage exit;
-        exit = loadImage("Images/Exit.png");
-        image(exit, exitButtonX, exitButtonY, 150, 100);
-        PFont mono;
-        mono = createFont("Fonts/SqueakyChalkSound.ttf", 100);
-        textFont(mono);
-        fill(255);
-        text("iLearns", 0, 100);
-
-
-        PImage dog;
-        dog = loadImage("Images/dog.png");
-        image(dog, 1200, 550, 350, 350);
-
-        stroke(0);
-        strokeWeight(3);
-        line(700, 500, 900, 500);
-        line(1000, 500, 1200, 500);
-        line(1300, 500, 1500, 500);
-
-
-        try {
-            line = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-            line = null;
-        }
-
-        if (line != null) {
-            char[] charArray = line.toCharArray();
-            int x = 750;
-            for (char c : charArray) {
-                text(c, x, 480);
-                x += 300;
-            }
-
-        }
-
-
-    }
-
-    static class Music extends Thread {
-
-        FileInputStream fileInputStream;
-        Player player;
-
-        {
-            try {
-                fileInputStream = new FileInputStream("Music/Kids_Music.mp3");
-                player = new Player(fileInputStream);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        public void run() {
-            try {
-                player.play();
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            }
-
-
-        }
-
-        public void pause() {
-            player.close();
-
-        }
-
-    }
 
 
 }
-
-
-
