@@ -6,8 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Created new branch.">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Refactoring&#10;- Created GamePage&#10;- Implemented class level mousepressed()">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +28,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <favorite-branches>
       <branch-storage>
         <map>
-          <entry type="REMOTE">
+          <entry type="LOCAL">
             <value>
               <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/Main" />
+                <branch-info repo="$PROJECT_DIR$" source="lucasbranch" />
               </list>
             </value>
           </entry>
@@ -43,7 +56,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +70,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.245" />
     <property name="project.structure.side.proportion" value="0.4076539" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -197,21 +210,7 @@
       <option name="project" value="LOCAL" />
       <updated>1567639260482</updated>
     </task>
-    <task id="LOCAL-00007" summary="Initialized visibility to false.&#10;Replaced While loop with if.">
-      <created>1567712228814</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1567712228814</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Created new branch.">
-      <created>1567712905091</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1567712905091</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -254,9 +253,7 @@
     <MESSAGE value="Added Windows reader code" />
     <MESSAGE value="First Step of refactoring&#10;- Created new &quot;Screen&quot; interface&#10;- Began moving home page to new interface layout" />
     <MESSAGE value="Refactoring&#10;- Created GamePage&#10;- Implemented class level mousepressed()" />
-    <MESSAGE value="Initialized visibility to false.&#10;Replaced While loop with if." />
-    <MESSAGE value="Created new branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring&#10;- Created GamePage&#10;- Implemented class level mousepressed()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,11 +305,6 @@
           <url>file://$PROJECT_DIR$/src/Main.java</url>
           <line>121</line>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
