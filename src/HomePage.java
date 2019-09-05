@@ -3,7 +3,7 @@ import javax.swing.*;
 import processing.core.PImage;
 public class HomePage implements Screen {
     private PApplet p;
-    public boolean visibility;
+    public boolean visibility = false;
     public HomePage(PApplet p) {
         this.p = p;
     }

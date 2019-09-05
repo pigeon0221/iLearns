@@ -120,7 +120,7 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-        while (!currentPage.visibility()) {
+        if (!currentPage.visibility()) {
             for (Screen x : pages.values()) {
                 if (x.visibility()) {
                     clear();
