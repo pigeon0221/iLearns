@@ -90,7 +90,6 @@ public class Main extends PApplet {
         surface.setResizable(true);
         loadImages();
         loadPrintWriter();
-
     }
 
     private void loadPrintWriter() {
