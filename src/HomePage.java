@@ -28,7 +28,7 @@ public class HomePage implements Screen {
     public PImage background() {
         return p.loadImage("Images/cartoonB.png");
     }
-
+    
     @Override
     public void create(){
         drawBackgroundElements();
