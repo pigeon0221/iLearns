@@ -3,7 +3,7 @@ import processing.core.PImage;
 
 public class GamePage implements Screen {
     private PApplet p;
-    public boolean visibility;
+    public boolean visibility = false;
 
     public GamePage(PApplet p) {
         this.p = p;
