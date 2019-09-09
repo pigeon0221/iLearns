@@ -1,9 +1,13 @@
 import processing.core.PApplet;
 import javax.swing.*;
 import processing.core.PImage;
+
 public class HomePage implements Screen {
     private PApplet p;
-    public boolean visibility;
+    public boolean visibility = false;
+
+    // Initialize the reference to the parent PApplet
+    // Anytime we want to call a Processing function, we access it via the "p" variable
     public HomePage(PApplet p) {
         this.p = p;
     }
