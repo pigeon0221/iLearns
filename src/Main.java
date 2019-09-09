@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
+//Main is an instance of PApplet
 public class Main extends PApplet {
     public static HashMap<String, Screen> pages = new HashMap<String, Screen>();
     private static Player player;
@@ -49,6 +50,7 @@ public class Main extends PApplet {
     private boolean playedSound = false;
 
 
+    // Tries to play the music
     {
         try {
             fileInputStream = new FileInputStream("Music/Kids_Music.mp3");
@@ -60,13 +62,14 @@ public class Main extends PApplet {
         }
     }
 
+    // Tells Processing to use this class ("Main") as a PApplet
     public static void main(String[] args) {
         PApplet.main("Main");
-
     }
 
-
+    // Runs before anything else - (Required definition for PApplet)
     public void settings() {
+        //Set the size of the window
         fullScreen();
         populatePages();
         setCurrentPage();
@@ -80,12 +83,14 @@ public class Main extends PApplet {
     }
 
     private void populatePages() {
+        // Passes a reference to "this" PApplet
         Screen HomePage = new HomePage(this);
         pages.put("HomePage", HomePage);
         Screen GamePage = new GamePage(this);
         pages.put("GamePage", GamePage);
     }
 
+    // Can be used to initialize variables - (Required definition for PApplet)
     public void setup() {
         surface.setResizable(true);
         loadImages();
@@ -118,9 +123,13 @@ public class Main extends PApplet {
         reset = loadImage("Images/reset.png");
     }
 
+    // Main program functionality, infinitely loops - (Required definition for PApplet)
     public void draw() {
+        //makes sure the current page is set to visible
         if (!currentPage.visibility()) {
+            //Searches through all of the screens
             for (Screen x : pages.values()) {
+                //if the current screen in visible, clear and set it as the currentPage
                 if (x.visibility()) {
                     clear();
                     currentPage = x;
@@ -128,6 +137,8 @@ public class Main extends PApplet {
                 }
             }
         }
+
+        //Displays the currentPage
         currentPage.create();
 
 //        if (begin) {
@@ -168,7 +179,11 @@ public class Main extends PApplet {
         drawBackgroundElements();
         fill(255);
         textSize(50);
+
+        //Draws the text at the specified dimensions and coordinates
         text("Level " + level, width / 2 - 100, 70);
+
+        //Draws the saved image at the specified dimensions and coordinates
         image(wordBox, 200, height / 2 - 200, 1520, 300);
         image(lastWord, 50, height / 2 - 200, 100, 100);
         image(nextWord, 1770, height / 2 - 200, 100, 100);
@@ -187,6 +202,7 @@ public class Main extends PApplet {
             textSize(80);
             text(line, 690, 525);
 
+            //Checks if the user got the letter correct
             if (gameWords.get(level - 1).length() == line.length() && gameWords.get(level - 1).equals(line) && playedSound == false) {
                 image(correct, width / 2 - 150, 200, 300, 300);
 //            try {
@@ -201,14 +217,13 @@ public class Main extends PApplet {
 //                e.printStackTrace();
 //            }
             }
+            //Checks if the user got the letter wrong
             //TODO: Bug in method that plays sound before displaying full output
             if (gameWords.get(level - 1).length() == line.length() && !gameWords.get(level - 1).equals(line) && playedSound == false) {
                 image(incorrect, width / 2 - 150, 200, 300, 300);
 //
             }
         }
-
-
     }
 
     private void createLibraryPage2() {
@@ -443,7 +458,6 @@ public class Main extends PApplet {
     private boolean overNextButton() {
         return mouseX > 890 && mouseX < 1035 && mouseY > 620 && mouseY < 680 && onNamePage;
     }
-
 
     private void returnToHomePage() {
         fileSelected = false;
