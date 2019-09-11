@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 
 public class Main extends PApplet {
-    public static HashMap<String, Screen> pages = new HashMap<String, Screen>();
+    Pages pages = new Pages();
     private static Player player;
     private static boolean onNamePage = false;
     String input = "";
@@ -76,14 +76,13 @@ public class Main extends PApplet {
     }
 
     private void setCurrentPage() {
-        currentPage = pages.get("HomePage");
+        currentPage = pages.getPage("HomePage");
     }
 
     private void populatePages() {
         Screen HomePage = new HomePage(this);
-        pages.put("HomePage", HomePage);
-        Screen GamePage = new GamePage(this);
-        pages.put("GamePage", GamePage);
+        pages.setPage("HomePage", HomePage);
+
     }
 
     public void setup() {
@@ -120,7 +119,7 @@ public class Main extends PApplet {
 
     public void draw() {
         if (!currentPage.visibility()) {
-            for (Screen x : pages.values()) {
+            for (Screen x : pages.getAllPages().values()) {
                 if (x.visibility()) {
                     clear();
                     currentPage = x;
@@ -187,24 +186,12 @@ public class Main extends PApplet {
             textSize(80);
             text(line, 690, 525);
 
-            if (gameWords.get(level - 1).length() == line.length() && gameWords.get(level - 1).equals(line) && playedSound == false) {
+            if (gameWords.get(level - 1).length() == line.length() && gameWords.get(level - 1).equals(line) ) {
                 image(correct, width / 2 - 150, 200, 300, 300);
-//            try {
-//                playedSound=true;
-//                text(gameWords.get(level-1),690,525);
-//                FileInputStream fileInputStream = new FileInputStream("Music/yayEffect.mp3");
-//                Player player = new Player(fileInputStream);
-//                player.play();
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            } catch (JavaLayerException e) {
-//                e.printStackTrace();
-//            }
             }
             //TODO: Bug in method that plays sound before displaying full output
-            if (gameWords.get(level - 1).length() == line.length() && !gameWords.get(level - 1).equals(line) && playedSound == false) {
+            if (gameWords.get(level - 1).length() == line.length() && !gameWords.get(level - 1).equals(line)) {
                 image(incorrect, width / 2 - 150, 200, 300, 300);
-//
             }
         }
 
@@ -284,7 +271,7 @@ public class Main extends PApplet {
     private void selectLibrary() {
         clear();
         drawBackgroundElements();
-        if (!fileSelected) {
+
             chooser = new JFileChooser();
             int result = chooser.showSaveDialog(null);
             if (result == JFileChooser.CANCEL_OPTION) {
@@ -292,8 +279,6 @@ public class Main extends PApplet {
                 returnToHomePage();
                 return;
             }
-            fileSelected = true;
-        }
 
         File f = chooser.getSelectedFile();
 
@@ -329,7 +314,6 @@ public class Main extends PApplet {
 
     public void mousePressed() {
         GameEffects.playClickSound();
-        checkDirectButtons();
         currentPage.mousePressed();
 //        if(begin) {
 //            if (overSelectLibrary()) {
@@ -411,22 +395,7 @@ public class Main extends PApplet {
 //        }
     }
 
-    private void checkDirectButtons() {
-        if (overExit()) {
-            exit();
-        }
-        if (overPause()) {
-            GameEffects.stopMusic();
-        }
-        if (overBackButton()) {
-            returnToHomePage();
-        }
-        if (overPlay()) {
-            //
-            //TODO: Plays music when play button is clicked
-            //
-        }
-    }
+
 
     private boolean overResetButton() {
         return mouseX > 865 && mouseX < 1055 && mouseY > 700 && mouseY < 900;
