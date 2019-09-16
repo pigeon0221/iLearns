@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Refactoring&#10;- Created classes for new library pages">
+      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,7 +147,7 @@
       <workItem from="1559244128467" duration="28723000" />
       <workItem from="1566924939295" duration="2132000" />
       <workItem from="1567631643025" duration="10308000" />
-      <workItem from="1568653760010" duration="6471000" />
+      <workItem from="1568653760010" duration="6971000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -197,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568659543744</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Refactoring&#10;- Created classes for new library pages">
+      <created>1568660278210</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568660278210</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactoring&#10;- Created classes for new library pages">
+      <created>1568660458969</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568660458969</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
