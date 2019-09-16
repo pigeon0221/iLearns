@@ -24,7 +24,13 @@ public class GamePage implements Screen {
         checkButtons();
     }
 
-    private void checkButtons() {
+    @Override
+    public void keyPressed() {
+
+    }
+
+    @Override
+    public void checkButtons() {
         if (overNextLibraryWord()) {
             if (level == library.size()) {
                 return;
@@ -64,12 +70,15 @@ public class GamePage implements Screen {
 
     }
 
-    private void checkBackgroundButtons() {
+    @Override
+    public void checkBackgroundButtons() {
         if (overExit()) {
             p.exit();
         }
         if (overPause()) {
-            //  GameEffects.stopMusic();
+            //
+            //TODO: Stop music when play button is clicked
+            //
         }
         if (overBackButton()) {
             visibility = false;
@@ -89,14 +98,14 @@ public class GamePage implements Screen {
     }
 
     @Override
-    public boolean visibility() {
+    public boolean getVisibility() {
         return visibility;
     }
 
 
     @Override
     public PImage background() {
-        return p.loadImage("Images/cartoonB.png");
+        return images.getImage("Background");
     }
 
     @Override
@@ -105,7 +114,8 @@ public class GamePage implements Screen {
         drawPageElements();
     }
 
-    private void drawPageElements() {
+    @Override
+    public void drawPageElements() {
         p.fill(255);
         p.textSize(50);
         p.text("Level " + level, p.width / 2 - 100, 70);
@@ -143,7 +153,8 @@ public class GamePage implements Screen {
         }
     }
 
-    private void drawBackgroundElements() {
+    @Override
+    public void drawBackgroundElements() {
         p.image(background(), 0, 0, p.width, p.height);
         drawExitButton();
         p.image(images.getImage("Logo"), 0, 0, 400, 150);
@@ -169,7 +180,6 @@ public class GamePage implements Screen {
     public boolean overPause() {
         return p.mouseX > 80 && p.mouseX < 160 && p.mouseY > 900;
     }
-
 
     public boolean overBackButton() {
         return p.mouseX > 1840 && p.mouseY > 900;

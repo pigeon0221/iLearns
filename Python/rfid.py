@@ -32,7 +32,7 @@ print(alphabet)
 while True:
     data = ser.readline() #.split(':')[1].rstrip("\n\r")
     if data:
-        data = str(data).split(':')[1].rstrip("\n\r")
+        data = str(data)
         print("Recieved KEY = " + data)
         if (mode == 1):
             if (data not in alphabet):

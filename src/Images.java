@@ -26,6 +26,7 @@ public class Images {
         images.put("ResetButton",  p.loadImage("Images/reset.png"));
         images.put("Error",  p.loadImage("Images/ERROR.png"));
         images.put("Exit",  p.loadImage("Images/Exit.png"));
+        images.put("Background",p.loadImage("Images/cartoonB.png"));
     }
     public PImage getImage(String imageName){
         return images.getOrDefault(imageName,images.get("Error"));

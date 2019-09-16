@@ -21,7 +21,13 @@ public class HomePage implements Screen {
         checkButtons();
     }
 
-    private void checkButtons() {
+    @Override
+    public void keyPressed() {
+
+    }
+
+    @Override
+    public void checkButtons() {
         if (overSelectLibrary()) {
             ArrayList<String> library = loadLibrary();
             if (library!=null){
@@ -29,7 +35,10 @@ public class HomePage implements Screen {
             }
         }
         if (overCreateLibrary()) {
-
+            visibility=false;
+            Screen LibraryNamePage = new LibraryNamePage(p);
+            pages.setPage("LibraryNamePage",LibraryNamePage);
+            pages.getPage("LibraryNamePage").setVisibility(true);
         }
     }
 
@@ -64,15 +73,18 @@ public class HomePage implements Screen {
         return gameWords;
     }
 
-
-    private void checkBackgroundButtons() {
+    @Override
+    public void checkBackgroundButtons() {
         if (overExit()) {
             p.exit();
         }
         if (overPause()) {
-            GameEffects.stopMusic();
+            //
+            //TODO: Stop music when play button is clicked
+            //
         }
         if (overBackButton()) {
+           //Do Nothing .. Already on HomePage
 
         }
         if (overPlay()) {
@@ -89,13 +101,13 @@ public class HomePage implements Screen {
     }
 
     @Override
-    public boolean visibility() {
+    public boolean getVisibility() {
         return visibility;
     }
 
     @Override
     public PImage background() {
-        return p.loadImage("Images/cartoonB.png");
+        return images.getImage("Background");
     }
 
     @Override
@@ -104,11 +116,13 @@ public class HomePage implements Screen {
         drawPageElements();
     }
 
-    private void drawPageElements() {
+    @Override
+    public void drawPageElements() {
         p.image(images.getImage("Menu"), p.displayWidth / 2 - 200, p.displayHeight / 2 - 200, 400, 400);
     }
 
-    private void drawBackgroundElements() {
+    @Override
+    public void drawBackgroundElements() {
         p.image(background(), 0, 0, p.width, p.height);
         drawExitButton();
         p.image(images.getImage("Logo"), 0, 0, 400, 150);
