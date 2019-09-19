@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Removed space.">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Jars.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Jars.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Added serial event input." />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568660458969</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added serial event input.">
+      <created>1568926212735</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568926212736</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -271,7 +272,8 @@
     <MESSAGE value="Refactoring&#10;- Created GamePage&#10;- Implemented class level mousepressed()" />
     <MESSAGE value="Refactoring&#10;- Moved HomePage and Gamepage to new structure&#10;- Created Image and Page classes" />
     <MESSAGE value="Refactoring&#10;- Created classes for new library pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring&#10;- Created classes for new library pages" />
+    <MESSAGE value="Added serial event input." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added serial event input." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -305,11 +307,6 @@
           <url>file://$PROJECT_DIR$/src/LibraryWordsPage.java</url>
           <line>24</line>
           <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PacketListener.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
