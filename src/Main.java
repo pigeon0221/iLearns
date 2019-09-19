@@ -1,3 +1,4 @@
+import com.fazecast.jSerialComm.SerialPort;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 import processing.core.PApplet;
@@ -18,6 +19,10 @@ public class Main extends PApplet {
 
 
     public static void main(String[] args) {
+        SerialPort comPort = SerialPort.getCommPorts()[0];
+        comPort.openPort();
+        PacketListener listener = new PacketListener();
+        comPort.addDataListener(listener);
         PApplet.main("Main");
     }
 
