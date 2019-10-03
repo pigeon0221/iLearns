@@ -13,7 +13,14 @@ public class Pages {
     public HashMap<String, Screen> getAllPages() {
         return pages;
     }
-
+    public Screen getActivePage(){
+        for (Screen x : getAllPages().values()) {
+            if(x.getVisibility()==true){
+                return x;
+            }
+        }
+        return null;
+    }
 
 }
 

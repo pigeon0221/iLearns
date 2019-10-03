@@ -5,9 +5,9 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 import javax.swing.*;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 
@@ -58,15 +58,7 @@ public class Main extends PApplet {
     }
 
     public void draw() {
-        if (!currentPage.getVisibility()) {
-            for (Screen x : pages.getAllPages().values()) {
-                if (x.getVisibility()) {
-                    clear();
-                    currentPage = x;
-                    break;
-                }
-            }
-        }
+        currentPage=pages.getActivePage();
         currentPage.create();
     }
 
