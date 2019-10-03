@@ -44,18 +44,8 @@ public class Main extends PApplet {
 
     public void setup() {
         surface.setResizable(true);
-        loadPrintWriter();
     }
 
-    private void loadPrintWriter() {
-        PrintWriter writer = null;
-        try {
-            writer = new PrintWriter("Python/output.txt");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        writer.close();
-    }
 
     public void draw() {
         currentPage=pages.getActivePage();
