@@ -6,13 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Converted reader to Java.">
-      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/iLearns_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/iLearns_jar.xml" afterDir="false" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Refactoring&#10;- Created classes for new library pages">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/iLearns.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/iLearns_jar/iLearns.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scaler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scaler.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,9 +20,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="iLearnsProject" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,6 +31,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="Main" />
@@ -44,11 +52,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="Main" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="pigeon0221" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="iLearns" />
-  </component>
   <component name="ProjectId" id="1Q14l8xIsYwuyUoW2pTPVoEbDna" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -56,10 +59,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Jars/jSerialComm-2.5.2.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.245" />
-    <property name="project.structure.side.proportion" value="0.15151513" />
+    <property name="project.structure.side.proportion" value="0.4076539" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
@@ -138,6 +141,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -157,8 +161,6 @@
       <workItem from="1559244128467" duration="28723000" />
       <workItem from="1566924939295" duration="2132000" />
       <workItem from="1567631643025" duration="10308000" />
-      <workItem from="1568653760010" duration="6971000" />
-      <workItem from="1570123772949" duration="10955000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -202,43 +204,31 @@
       <option name="project" value="LOCAL" />
       <updated>1567639260482</updated>
     </task>
-    <task id="LOCAL-00007" summary="Refactoring&#10;- Created classes for new library pages">
-      <created>1568659543744</created>
+    <task id="LOCAL-00007" summary="Initialized visibility to false.&#10;Replaced While loop with if.">
+      <created>1567712228814</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1568659543744</updated>
+      <updated>1567712228814</updated>
     </task>
-    <task id="LOCAL-00008" summary="Refactoring&#10;- Created classes for new library pages">
-      <created>1568660278210</created>
+    <task id="LOCAL-00008" summary="Created new branch.">
+      <created>1567712905091</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1568660278210</updated>
+      <updated>1567712905091</updated>
     </task>
-    <task id="LOCAL-00009" summary="Refactoring&#10;- Created classes for new library pages">
-      <created>1568660458969</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1568660458969</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added serial event input.">
-      <created>1568926212735</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1568926212736</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Converted reader to Java.">
-      <created>1570134145977</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1570134145981</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -265,77 +255,14 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Conference folder" />
     <MESSAGE value="Added Windows reader code" />
     <MESSAGE value="First Step of refactoring&#10;- Created new &quot;Screen&quot; interface&#10;- Began moving home page to new interface layout" />
     <MESSAGE value="Refactoring&#10;- Created GamePage&#10;- Implemented class level mousepressed()" />
-    <MESSAGE value="Refactoring&#10;- Moved HomePage and Gamepage to new structure&#10;- Created Image and Page classes" />
-    <MESSAGE value="Refactoring&#10;- Created classes for new library pages" />
-    <MESSAGE value="Added serial event input." />
-    <MESSAGE value="Converted reader to Java." />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted reader to Java." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HomePage.java</url>
-          <line>148</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LibraryNamePage.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LibraryNamePage.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LibraryWordsPage.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PacketListener.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="this" />
-        <watch expression="currentPage" language="JAVA" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="Initialized visibility to false.&#10;Replaced While loop with if." />
+    <MESSAGE value="Created new branch." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new branch." />
   </component>
 </project>
