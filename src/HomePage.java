@@ -146,7 +146,7 @@ public class HomePage implements Screen {
     public PImage background() {
         return images.getImage("Background");
     }
-
+    
     @Override
     public void create() {
         drawBackgroundElements();

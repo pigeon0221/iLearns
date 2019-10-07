@@ -6,12 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Removed python stuff.">
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Converted reader to Java.">
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/iLearns_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/iLearns_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/iLearns.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/iLearns_jar/iLearns.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +56,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Jars/jSerialComm-2.5.2.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.245" />
     <property name="project.structure.side.proportion" value="0.15151513" />
@@ -157,8 +158,7 @@
       <workItem from="1566924939295" duration="2132000" />
       <workItem from="1567631643025" duration="10308000" />
       <workItem from="1568653760010" duration="6971000" />
-      <workItem from="1570123772949" duration="14581000" />
-      <workItem from="1570477547280" duration="800000" />
+      <workItem from="1570123772949" duration="10955000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -237,14 +237,7 @@
       <option name="project" value="LOCAL" />
       <updated>1570134145981</updated>
     </task>
-    <task id="LOCAL-00012" summary="Removed python stuff.">
-      <created>1570134987929</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1570134987929</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,8 +289,7 @@
     <MESSAGE value="Refactoring&#10;- Created classes for new library pages" />
     <MESSAGE value="Added serial event input." />
     <MESSAGE value="Converted reader to Java." />
-    <MESSAGE value="Removed python stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed python stuff." />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted reader to Java." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
