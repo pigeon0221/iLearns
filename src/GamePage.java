@@ -3,19 +3,23 @@ import processing.core.PImage;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class GamePage implements Screen {
+public class GamePage implements TagScreen {
     public boolean visibility = false;
     Pages pages = new Pages();
     Images images;
     int level = 1;
     ArrayList<String> library = new ArrayList<>();
+    HashMap<String, String> dictionary = new HashMap<>();
     private PApplet p;
+    String scannerInput = "";
 
-    public GamePage(PApplet p, ArrayList<String> lib) {
+    public GamePage(PApplet p, ArrayList<String> lib, HashMap<String, String> dic) {
         this.p = p;
         images = new Images(this.p);
         library = lib;
+        dictionary=dic;
     }
 
     @Override
@@ -36,12 +40,7 @@ public class GamePage implements Screen {
                 return;
             } else {
                 level += 1;
-                try {
-                    PrintWriter writer = new PrintWriter("Python/output.txt");
-                    writer.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+               scannerInput="";
             }
 
         }
@@ -50,22 +49,12 @@ public class GamePage implements Screen {
                 return;
             } else {
                 level -= 1;
-                try {
-                    PrintWriter writer = new PrintWriter("Python/output.txt");
-                    writer.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                scannerInput="";
             }
 
         }
         if (overResetButton()) {
-            try {
-                PrintWriter writer = new PrintWriter("Python/output.txt");
-                writer.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+            scannerInput="";
         }
 
     }
@@ -123,31 +112,17 @@ public class GamePage implements Screen {
         p.image(images.getImage("BackWordButton"), 50, p.height / 2 - 200, 100, 100);
         p.image(images.getImage("NextWordButton"), 1770, p.height / 2 - 200, 100, 100);
         p.image(images.getImage("ResetButton"), p.width / 2 - 100, 700, 200, 200);
-        String line;
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader("Python/output.txt"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
 
-
-        try {
-            line = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-            line = null;
-        }
-        if (line != null) {
+        if (scannerInput != null) {
             p.textSize(80);
-            p.text(line, 690, 525);
+            p.text(scannerInput, 690, 525);
 
             //If the word is spelled correctly
-            if (library.get(level - 1).length() == line.length() && library.get(level - 1).equals(line)) {
+            if (library.get(level - 1).length() == scannerInput.length() && library.get(level - 1).equals(scannerInput)) {
                 p.image(images.getImage("Correct"), p.width / 2 - 150, 200, 300, 300);
             }
             //If the word is spelled incorrectly
-            if (library.get(level - 1).length() == line.length() && !library.get(level - 1).equals(line)) {
+            if (library.get(level - 1).length() == scannerInput.length() && !library.get(level - 1).equals(scannerInput)) {
                 p.image(images.getImage("Incorrect"), p.width / 2 - 150, 200, 300, 300);
             }
         }
@@ -198,4 +173,8 @@ public class GamePage implements Screen {
     }
 
 
+    @Override
+    public void scanTag(String tag) {
+        scannerInput+=dictionary.get(tag);
+    }
 }

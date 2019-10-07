@@ -1,12 +1,13 @@
+import com.fazecast.jSerialComm.SerialPort;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 import processing.core.PApplet;
 import processing.core.PImage;
 
 import javax.swing.*;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 
@@ -18,6 +19,10 @@ public class Main extends PApplet {
 
 
     public static void main(String[] args) {
+        SerialPort comPort = SerialPort.getCommPorts()[0];
+        comPort.openPort();
+        PacketListener listener = new PacketListener();
+        comPort.addDataListener(listener);
         PApplet.main("Main");
     }
 
@@ -39,29 +44,11 @@ public class Main extends PApplet {
 
     public void setup() {
         surface.setResizable(true);
-        loadPrintWriter();
     }
 
-    private void loadPrintWriter() {
-        PrintWriter writer = null;
-        try {
-            writer = new PrintWriter("Python/output.txt");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        writer.close();
-    }
 
     public void draw() {
-        if (!currentPage.getVisibility()) {
-            for (Screen x : pages.getAllPages().values()) {
-                if (x.getVisibility()) {
-                    clear();
-                    currentPage = x;
-                    break;
-                }
-            }
-        }
+        currentPage=pages.getActivePage();
         currentPage.create();
     }
 

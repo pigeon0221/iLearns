@@ -1,15 +1,17 @@
 import processing.core.PApplet;
-import javax.swing.*;
 import processing.core.PImage;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HomePage implements Screen {
-    private PApplet p;
-    Pages pages = new Pages();
     public boolean visibility = false;
+    Pages pages = new Pages();
     Images images;
+    private PApplet p;
+
     public HomePage(PApplet p) {
         this.p = p;
         images = new Images(this.p);
@@ -30,23 +32,59 @@ public class HomePage implements Screen {
     public void checkButtons() {
         if (overSelectLibrary()) {
             ArrayList<String> library = loadLibrary();
-            if (library!=null){
-                startGame(library);
+            HashMap<String,String> dictionary = loadDictionary();
+            if (library != null) {
+                startGame(library,dictionary);
             }
         }
         if (overCreateLibrary()) {
-            visibility=false;
+            visibility = false;
             Screen LibraryNamePage = new LibraryNamePage(p);
-            pages.setPage("LibraryNamePage",LibraryNamePage);
+            pages.setPage("LibraryNamePage", LibraryNamePage);
             pages.getPage("LibraryNamePage").setVisibility(true);
+        }
+        if (overCreateDictionary()) {
+            visibility = false;
+            Screen DictionaryNamePage = new DictionaryNamePage(p);
+            pages.setPage("DictionaryNamePage", DictionaryNamePage);
+            pages.getPage("DictionaryNamePage").setVisibility(true);
         }
     }
 
-    private void startGame(ArrayList<String> library) {
-        GamePage game = new GamePage(p,library);
+    private HashMap<String, String> loadDictionary() {
+        JFileChooser chooser = new JFileChooser();
+        int result = chooser.showSaveDialog(null);
+        if (result == JFileChooser.CANCEL_OPTION) {
+            System.out.println("Cancel was selected");
+            return null;
+        }
+        File f = chooser.getSelectedFile();
+        ArrayList<String> gameWords = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(f.getAbsolutePath()))) {
+            for (String line; (line = br.readLine()) != null; ) {
+                gameWords.add(line.trim());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        HashMap<String, String> dictionary = new HashMap<>();
+        for(int x = 0;x<gameWords.size();x+=2) {
+            dictionary.put(gameWords.get(x),gameWords.get(x+1));
+        }
+        return dictionary;
+    }
+
+
+    private void startGame(ArrayList<String> library, HashMap<String, String> dictionary) {
+        GamePage game = new GamePage(p, library,dictionary);
         game.setVisibility(true);
         visibility = false;
-        pages.setPage("GamePage",game);
+        pages.setPage("GamePage", game);
     }
 
     private ArrayList<String> loadLibrary() {
@@ -84,7 +122,7 @@ public class HomePage implements Screen {
             //
         }
         if (overBackButton()) {
-           //Do Nothing .. Already on HomePage
+            //Do Nothing .. Already on HomePage
 
         }
         if (overPlay()) {
@@ -93,16 +131,15 @@ public class HomePage implements Screen {
             //
         }
     }
-    
-
-    @Override
-    public void setVisibility(boolean state) {
-        visibility = state;
-    }
 
     @Override
     public boolean getVisibility() {
         return visibility;
+    }
+
+    @Override
+    public void setVisibility(boolean state) {
+        visibility = state;
     }
 
     @Override
@@ -111,7 +148,7 @@ public class HomePage implements Screen {
     }
     
     @Override
-    public void create(){
+    public void create() {
         drawBackgroundElements();
         drawPageElements();
     }
@@ -160,5 +197,10 @@ public class HomePage implements Screen {
     public boolean overBackButton() {
         return p.mouseX > 1840 && p.mouseY > 900;
     }
+
+    private boolean overCreateDictionary() {
+        return p.mouseX > 800 && p.mouseX < 1120 && p.mouseY > 663 && p.mouseY < 700;
+    }
+
 
 }

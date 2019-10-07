@@ -17,6 +17,7 @@ public class Images {
         images.put("Menu", p.loadImage("Images/menu.png"));
         images.put("BackButton", p.loadImage("Images/backButton.png"));
         images.put("LibraryNameMenu",p.loadImage("Images/LibraryName.png"));
+        images.put("DictionaryNameMenu",p.loadImage("Images/DictionaryName.png"));
         images.put("LibraryWordMenu", p.loadImage("Images/LibraryWords.png"));
         images.put("WordBox",p.loadImage("Images/wordBox.png"));
         images.put("NextWordButton", p.loadImage("Images/nextWordButton.png"));
@@ -27,6 +28,8 @@ public class Images {
         images.put("Error",  p.loadImage("Images/ERROR.png"));
         images.put("Exit",  p.loadImage("Images/Exit.png"));
         images.put("Background",p.loadImage("Images/cartoonB.png"));
+        images.put("ScanRFID",p.loadImage("Images/ScanRFID.png"));
+        images.put("DictionaryWord",p.loadImage("Images/DictionaryWord.png"));
     }
     public PImage getImage(String imageName){
         return images.getOrDefault(imageName,images.get("Error"));

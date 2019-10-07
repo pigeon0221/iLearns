@@ -2,12 +2,10 @@
   <artifact type="jar" name="iLearns:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/iLearns_jar</output-path>
     <root id="archive" name="iLearns.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="iLearns" />
       <element id="extracted-dir" path="$PROJECT_DIR$/Jars/core.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/Jars/jl1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Jars/jSerialComm-2.5.2.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
