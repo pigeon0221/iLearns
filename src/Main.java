@@ -19,17 +19,17 @@ public class Main extends PApplet {
 
 
     public static void main(String[] args) {
-        SerialPort comPort = SerialPort.getCommPorts()[0];
-        comPort.openPort();
-        PacketListener listener = new PacketListener();
-        comPort.addDataListener(listener);
+//        SerialPort comPort = SerialPort.getCommPorts()[0];
+//        comPort.openPort();
+//        PacketListener listener = new PacketListener();
+//        comPort.addDataListener(listener);
         PApplet.main("Main");
     }
 
     public void settings() {
         fullScreen();
-        Scaler.setScalerHeight(displayHeight);
-        Scaler.setScalerHeight(displayHeight);
+        Scaler.setScalerWidth(parseFloat(displayWidth));
+        Scaler.setScalerHeight(parseFloat(displayHeight));
         populatePages();
         setCurrentPage();
         currentPage.setVisibility(true);

@@ -155,51 +155,51 @@ public class HomePage implements Screen {
 
     @Override
     public void drawPageElements() {
-        p.image(images.getImage("Menu"), p.displayWidth / 2 - 200, p.displayHeight / 2 - 200, 400, 400);
+        p.image(images.getImage("Menu"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
     }
 
     @Override
     public void drawBackgroundElements() {
         p.image(background(), 0, 0, p.width, p.height);
         drawExitButton();
-        p.image(images.getImage("Logo"), 0, 0, 400, 150);
-        p.image(images.getImage("PlayButton"), 0, 900, 80, 80);
-        p.image(images.getImage("PauseButton"), 80, 900, 80, 80);
-        p.image(images.getImage("BackButton"), 1840, 900, 80, 80);
+        p.image(images.getImage("Logo"), 0, Scaler.sh(10), Scaler.sw(400), Scaler.sh(125));
+        p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+        p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+        p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
     }
 
     public void drawExitButton() {
         p.fill(0);
-        p.rect(1770, 0, 150, 100);
-        p.image(images.getImage("Exit"), 1770, 0, 150, 100);
+        p.rect(Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100));
+        p.image(images.getImage("Exit"), Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100));
     }
 
     public boolean overExit() {
-        return p.mouseX > p.displayWidth - 150 && p.mouseY < 100;
+        return p.mouseX > Scaler.sw(1770) && p.mouseY < Scaler.sh(100);
     }
 
     public boolean overPlay() {
-        return p.mouseX < 80 && p.mouseY > 900;
+        return p.mouseX < Scaler.sw(80) && p.mouseY > Scaler.sh(900);
     }
 
     public boolean overPause() {
-        return p.mouseX > 80 && p.mouseX < 160 && p.mouseY > 900;
+        return p.mouseX > Scaler.sw(80) && p.mouseX < Scaler.sw(160) && p.mouseY > Scaler.sh(900);
     }
 
     public boolean overSelectLibrary() {
-        return p.mouseX > 818 && p.mouseX < 1097 && p.mouseY > 457 && p.mouseY < 500;
+        return p.mouseX > Scaler.sw(818) && p.mouseX < Scaler.sw(1097) && p.mouseY > Scaler.sh(457) && p.mouseY < Scaler.sh(500);
     }
 
     public boolean overCreateLibrary() {
-        return p.mouseX > 808 && p.mouseX < 1108 && p.mouseY > 560 && p.mouseY < 610;
+        return p.mouseX > Scaler.sw(808) && p.mouseX < Scaler.sw(1108) && p.mouseY > Scaler.sh(560) && p.mouseY < Scaler.sh(610);
     }
 
     public boolean overBackButton() {
-        return p.mouseX > 1840 && p.mouseY > 900;
+        return p.mouseX > Scaler.sw(1840) && p.mouseY > Scaler.sh(900);
     }
 
     private boolean overCreateDictionary() {
-        return p.mouseX > 800 && p.mouseX < 1120 && p.mouseY > 663 && p.mouseY < 700;
+        return p.mouseX > Scaler.sw(800) && p.mouseX < Scaler.sw(1120) && p.mouseY > Scaler.sh(663) && p.mouseY < Scaler.sh(700);
     }
 
 

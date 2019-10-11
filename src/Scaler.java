@@ -3,20 +3,22 @@ import processing.core.PApplet;
 import java.util.HashMap;
 
 public class Scaler {
-    private static int scaleH;
-    private static int scaleW;
+    private static float scaleH;
+    private static float scaleW;
     public static int sw(int width){
         return (int) (width*scaleW);
     }
     public static int sh(int height){
         return (int) (height*scaleH);
     }
-    public static void  setScalerWidth(int width)
+    public static void setScalerWidth(float width)
     {
         scaleW=width/1920;
+        //System.out.println("sw: "+scaleW);
     }
-    public static void setScalerHeight(int height)
+    public static void setScalerHeight(float height)
     {
         scaleH=height/1080;
+        //System.out.println("sh: "+scaleH);
     }
 }

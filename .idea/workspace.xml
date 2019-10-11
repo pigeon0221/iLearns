@@ -6,9 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Refactoring&#10;- Created classes for new library pages">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Made all dimensions scalable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/GamePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/GamePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/LibraryNamePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/LibraryNamePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/LibraryWordsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/LibraryWordsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DictionaryNamePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryNamePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DictionaryWordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryWordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryNamePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryNamePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryWordsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryWordsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scaler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scaler.java" afterDir="false" />
     </list>
@@ -31,9 +41,29 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <favorite-branches>
       <branch-storage>
         <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="MarkBranch" />
+              </list>
+            </value>
+          </entry>
           <entry type="REMOTE">
             <value>
               <list>
@@ -51,6 +81,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="Main" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="pigeon0221" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="iLearns" />
   </component>
   <component name="ProjectId" id="1Q14l8xIsYwuyUoW2pTPVoEbDna" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -218,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567712905091</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added scaler class.">
+      <created>1570478391826</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1570478391826</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -263,6 +305,7 @@
     <MESSAGE value="Refactoring&#10;- Created GamePage&#10;- Implemented class level mousepressed()" />
     <MESSAGE value="Initialized visibility to false.&#10;Replaced While loop with if." />
     <MESSAGE value="Created new branch." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new branch." />
+    <MESSAGE value="Added scaler class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added scaler class." />
   </component>
 </project>
