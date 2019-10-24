@@ -28,8 +28,8 @@ public class Main extends PApplet {
 
     public void settings() {
         fullScreen();
-        Scaler.setScalerHeight(displayHeight);
-        Scaler.setScalerHeight(displayHeight);
+        Scaler.setScalerWidth(parseFloat(displayWidth));
+        Scaler.setScalerHeight(parseFloat(displayHeight));
         populatePages();
         setCurrentPage();
         currentPage.setVisibility(true);
