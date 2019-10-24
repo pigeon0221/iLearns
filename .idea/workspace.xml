@@ -6,16 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Converted reader to Java.">
-      <change afterPath="$PROJECT_DIR$/src/CreatePDF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Jars.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Jars.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Added jar">
+      <change afterPath="$PROJECT_DIR$/Dictionary/Alex.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/a.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/est.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/krisdictionary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/lucas.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/mdict.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dictionary/tet.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/DictionaryName.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/DictionaryWord.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/PDFButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/ScanRFID.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/cute-ghost.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library PDF's/Demo.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library PDF's/Kris.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +171,7 @@
       <workItem from="1568653760010" duration="6971000" />
       <workItem from="1570123772949" duration="10955000" />
       <workItem from="1571939204814" duration="3271000" />
-      <workItem from="1571942500680" duration="8938000" />
+      <workItem from="1571942500680" duration="9322000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -244,7 +250,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570134145981</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added convert to pdf">
+      <created>1571953569230</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571953569230</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added jar">
+      <created>1571953756420</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571953756420</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +316,9 @@
     <MESSAGE value="Refactoring&#10;- Created classes for new library pages" />
     <MESSAGE value="Added serial event input." />
     <MESSAGE value="Converted reader to Java." />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted reader to Java." />
+    <MESSAGE value="Added convert to pdf" />
+    <MESSAGE value="Added jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
