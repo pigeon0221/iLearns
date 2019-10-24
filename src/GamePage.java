@@ -106,24 +106,24 @@ public class GamePage implements TagScreen {
     @Override
     public void drawPageElements() {
         p.fill(255);
-        p.textSize(50);
-        p.text("Level " + level, p.width / 2 - 100, 70);
-        p.image(images.getImage("WordBox"), 200, p.height / 2 - 200, 1520, 300);
-        p.image(images.getImage("BackWordButton"), 50, p.height / 2 - 200, 100, 100);
-        p.image(images.getImage("NextWordButton"), 1770, p.height / 2 - 200, 100, 100);
-        p.image(images.getImage("ResetButton"), p.width / 2 - 100, 700, 200, 200);
+        p.textSize(Scaler.sh(50));
+        p.text("Level " + level, Scaler.sw(860), Scaler.sh(70));
+        p.image(images.getImage("WordBox"), Scaler.sw(200), Scaler.sh(340), Scaler.sw(1520), Scaler.sh(300));
+        p.image(images.getImage("BackWordButton"), Scaler.sw(50), Scaler.sh(340), Scaler.sw(100), Scaler.sh(100));
+        p.image(images.getImage("NextWordButton"), Scaler.sw(1770), Scaler.sh(340), Scaler.sw(100), Scaler.sh(100));
+        p.image(images.getImage("ResetButton"), Scaler.sw(860), Scaler.sh(700), Scaler.sw(200), Scaler.sh(200));
 
         if (scannerInput != null) {
-            p.textSize(80);
-            p.text(scannerInput, 690, 525);
+            p.textSize(Scaler.sh(80));
+            p.text(scannerInput, Scaler.sw(690), Scaler.sh(525));
 
             //If the word is spelled correctly
             if (library.get(level - 1).length() == scannerInput.length() && library.get(level - 1).equals(scannerInput)) {
-                p.image(images.getImage("Correct"), p.width / 2 - 150, 200, 300, 300);
+                p.image(images.getImage("Correct"), Scaler.sw(390), Scaler.sh(200), Scaler.sw(300), Scaler.sh(300));
             }
             //If the word is spelled incorrectly
             if (library.get(level - 1).length() == scannerInput.length() && !library.get(level - 1).equals(scannerInput)) {
-                p.image(images.getImage("Incorrect"), p.width / 2 - 150, 200, 300, 300);
+                p.image(images.getImage("Incorrect"), Scaler.sw(390), Scaler.sh(200), Scaler.sw(300), Scaler.sh(300));
             }
         }
     }
@@ -132,44 +132,44 @@ public class GamePage implements TagScreen {
     public void drawBackgroundElements() {
         p.image(background(), 0, 0, p.width, p.height);
         drawExitButton();
-        p.image(images.getImage("Logo"), 0, 0, 400, 150);
-        p.image(images.getImage("PlayButton"), 0, 900, 80, 80);
-        p.image(images.getImage("PauseButton"), 80, 900, 80, 80);
-        p.image(images.getImage("BackButton"), 1840, 900, 80, 80);
+        p.image(images.getImage("Logo"), 0, Scaler.sh(10), Scaler.sw(400), Scaler.sh(125));
+        p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+        p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+        p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
     }
 
     public void drawExitButton() {
         p.fill(0);
-        p.rect(1770, 0, 150, 100);
-        p.image(images.getImage("Exit"), 1770, 0, 150, 100);
+        p.rect(Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100));
+        p.image(images.getImage("Exit"), Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100));
     }
 
     public boolean overExit() {
-        return p.mouseX > p.displayWidth - 150 && p.mouseY < 100;
+        return p.mouseX > Scaler.sw(1770) && p.mouseY < Scaler.sh(100);
     }
 
     public boolean overPlay() {
-        return p.mouseX < 80 && p.mouseY > 900;
+        return p.mouseX < Scaler.sw(80) && p.mouseY > Scaler.sh(900);
     }
 
     public boolean overPause() {
-        return p.mouseX > 80 && p.mouseX < 160 && p.mouseY > 900;
+        return p.mouseX > Scaler.sw(80) && p.mouseX < Scaler.sw(160) && p.mouseY > Scaler.sh(900);
     }
 
     public boolean overBackButton() {
-        return p.mouseX > 1840 && p.mouseY > 900;
+        return p.mouseX > Scaler.sw(1840) && p.mouseY > Scaler.sh(900);
     }
 
     private boolean overResetButton() {
-        return p.mouseX > 865 && p.mouseX < 1055 && p.mouseY > 700 && p.mouseY < 900;
+        return p.mouseX > Scaler.sw(865) && p.mouseX < Scaler.sw(1055) && p.mouseY > Scaler.sh(700) && p.mouseY < Scaler.sh(900);
     }
 
     private boolean overPreviousLibraryWord() {
-        return p.mouseX > 50 && p.mouseX < 145 && p.mouseY > 340 && p.mouseY < 435;
+        return p.mouseX > Scaler.sw(50) && p.mouseX < Scaler.sw(145) && p.mouseY > Scaler.sh(340) && p.mouseY < Scaler.sh(435);
     }
 
     private boolean overNextLibraryWord() {
-        return p.mouseX > 1770 && p.mouseX < 1875 && p.mouseY > 340 && p.mouseY < 435;
+        return p.mouseX > Scaler.sw(1770) && p.mouseX < Scaler.sw(1875) && p.mouseY > Scaler.sh(340) && p.mouseY < Scaler.sh(435);
     }
 
 
