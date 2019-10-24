@@ -49,10 +49,20 @@ public class HomePage implements Screen {
             pages.setPage("DictionaryNamePage", DictionaryNamePage);
             pages.getPage("DictionaryNamePage").setVisibility(true);
         }
+        if (overDownloadPDF()){
+            CreatePDF c = new CreatePDF();
+            c.Convert();
+        }
     }
 
     private HashMap<String, String> loadDictionary() {
+        JOptionPane.showMessageDialog(null,
+                "Please select a dictionary.",
+                "ILearns",
+                JOptionPane.PLAIN_MESSAGE);
+        File workingDirectory = new File(System.getProperty("user.dir")+File.separator+"Dictionary");
         JFileChooser chooser = new JFileChooser();
+        chooser.setCurrentDirectory(workingDirectory);
         int result = chooser.showSaveDialog(null);
         if (result == JFileChooser.CANCEL_OPTION) {
             System.out.println("Cancel was selected");
@@ -88,7 +98,13 @@ public class HomePage implements Screen {
     }
 
     private ArrayList<String> loadLibrary() {
+        JOptionPane.showMessageDialog(null,
+                "Please select which library you would like to play.",
+                "ILearns",
+                JOptionPane.PLAIN_MESSAGE);
+        File workingDirectory = new File(System.getProperty("user.dir")+File.separator+"Libraries");
         JFileChooser chooser = new JFileChooser();
+        chooser.setCurrentDirectory(workingDirectory);
         int result = chooser.showSaveDialog(null);
         if (result == JFileChooser.CANCEL_OPTION) {
             System.out.println("Cancel was selected");
@@ -156,6 +172,7 @@ public class HomePage implements Screen {
     @Override
     public void drawPageElements() {
         p.image(images.getImage("Menu"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
+        p.image(images.getImage("PDFButton"),Scaler.sw(0), Scaler.sh(800), Scaler.sw(300), Scaler.sh(100));
     }
 
     @Override
@@ -201,6 +218,8 @@ public class HomePage implements Screen {
     private boolean overCreateDictionary() {
         return p.mouseX > Scaler.sw(800) && p.mouseX < Scaler.sw(1120) && p.mouseY > Scaler.sh(663) && p.mouseY < Scaler.sh(700);
     }
+
+    private boolean overDownloadPDF(){ return p.mouseX > Scaler.sw(0) && p.mouseX < Scaler.sw(300) && p.mouseY < Scaler.sh(900)  && p.mouseY > Scaler.sh(800); }
 
 
 }
