@@ -30,6 +30,7 @@ public class Images {
         images.put("Background",p.loadImage("Images/cartoonB.png"));
         images.put("ScanRFID",p.loadImage("Images/ScanRFID.png"));
         images.put("DictionaryWord",p.loadImage("Images/DictionaryWord.png"));
+        images.put("PDFButton",p.loadImage("Images/PDFButton.png"));
     }
     public PImage getImage(String imageName){
         return images.getOrDefault(imageName,images.get("Error"));
