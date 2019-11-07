@@ -12,15 +12,30 @@ public class HomePage implements Screen {
     Images images;
     private PApplet p;
 
+    //Declare ColorButton
+    ColorButton a_button;
+
     public HomePage(PApplet p) {
         this.p = p;
         images = new Images(this.p);
+
+        //initialize the ColorButton
+        a_button = new ColorButton(this.p, 100, 100, 100, 100, "a",p.color(100,20,100));
     }
 
     @Override
     public void mousePressed() {
         checkBackgroundButtons();
         checkButtons();
+    }
+
+    public void mouseOver(){
+        a_button.mouseOver();
+    }
+
+    @Override
+    public void mouseReleased() {
+        checkBackgroundButtons();
     }
 
     @Override
@@ -53,6 +68,9 @@ public class HomePage implements Screen {
             CreatePDF c = new CreatePDF();
             c.Convert();
         }
+
+        //check if the ColorButton was clicked
+        a_button.buttonPressed();
     }
 
     private HashMap<String, String> loadDictionary() {
@@ -167,6 +185,10 @@ public class HomePage implements Screen {
     public void create() {
         drawBackgroundElements();
         drawPageElements();
+
+        //draw the ColorButton
+
+        a_button.renderButton();
     }
 
     @Override

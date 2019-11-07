@@ -2,6 +2,7 @@ import processing.core.PImage;
 
 public interface Screen {
     void mousePressed(); // What to do when the mouse is pressed
+    void mouseReleased(); // What to do when the mouse is released
     void keyPressed(); // What to do when the key is pressed
     void checkButtons();
     void checkBackgroundButtons();
@@ -11,4 +12,6 @@ public interface Screen {
     void create();
     void drawPageElements();
     void drawBackgroundElements();
+
+    void mouseOver();
 }

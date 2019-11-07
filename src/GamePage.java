@@ -29,6 +29,11 @@ public class GamePage implements TagScreen {
     }
 
     @Override
+    public void mouseReleased() {
+
+    }
+
+    @Override
     public void keyPressed() {
 
     }
@@ -136,6 +141,11 @@ public class GamePage implements TagScreen {
         p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+    }
+
+    @Override
+    public void mouseOver() {
+
     }
 
     public void drawExitButton() {

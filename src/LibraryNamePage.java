@@ -2,7 +2,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 public class LibraryNamePage implements Screen {
-    public boolean visibility = false;
+    private boolean visibility = false;
     Pages pages = new Pages();
     Images images;
     String nameInput = "";
@@ -17,6 +17,11 @@ public class LibraryNamePage implements Screen {
     public void mousePressed() {
         checkBackgroundButtons();
         checkButtons();
+    }
+
+    @Override
+    public void mouseReleased() {
+
     }
 
     public void keyPressed() {
@@ -85,6 +90,11 @@ public class LibraryNamePage implements Screen {
         p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+    }
+
+    @Override
+    public void mouseOver() {
+
     }
 
     public void drawExitButton() {

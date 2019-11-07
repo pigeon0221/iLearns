@@ -63,6 +63,7 @@ public class Main extends PApplet {
 
     public void setup() {
         surface.setResizable(true);
+        noLoop();
     }
 
 
@@ -97,8 +98,18 @@ public class Main extends PApplet {
     }
 
     public void mousePressed() {
-        System.out.println(mouseX+","+mouseY);
+        System.out.println("Mouse pressed at " + mouseX+","+mouseY);
         GameEffects.playClickSound();
         currentPage.mousePressed();
+    }
+
+    public void mouseReleased() {
+        System.out.println("Mouse released at " + mouseX+","+mouseY);
+        GameEffects.playClickSound();
+        currentPage.mouseReleased();
+    }
+    public void mouseMoved(){
+      //  System.out.println("Mouse Moved");
+        currentPage.mouseOver();
     }
 }

@@ -29,6 +29,11 @@ public class LibraryWordsPage implements Screen {
     }
 
     @Override
+    public void mouseReleased() {
+
+    }
+
+    @Override
     public void keyPressed() {
         if (p.keyCode == 10 || p.keyCode == 16) {
             return;
@@ -117,6 +122,11 @@ public class LibraryWordsPage implements Screen {
         p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
+    }
+
+    @Override
+    public void mouseOver() {
+
     }
 
     public void drawExitButton() {
