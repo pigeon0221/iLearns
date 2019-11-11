@@ -66,7 +66,6 @@ public class Main extends PApplet {
         noLoop();
     }
 
-
     public void draw() {
         checkUSBConnection();
         currentPage=pages.getActivePage();
@@ -106,7 +105,6 @@ public class Main extends PApplet {
     public void mouseReleased() {
         System.out.println("Mouse released at " + mouseX+","+mouseY);
         GameEffects.playClickSound();
-        currentPage.mouseReleased();
     }
     public void mouseMoved(){
       //  System.out.println("Mouse Moved");

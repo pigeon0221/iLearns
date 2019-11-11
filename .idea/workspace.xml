@@ -6,16 +6,24 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Converted reader to Java.">
-      <change afterPath="$PROJECT_DIR$/src/CreatePDF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Jars.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Jars.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Created first draft working ColorButton">
+      <change afterPath="$PROJECT_DIR$/src/ImgButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/GamePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/GamePage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/iLearns/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/LibraryNamePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/LibraryNamePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/LibraryWordsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/LibraryWordsPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DictionaryNamePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryNamePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DictionaryWordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DictionaryWordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Images.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryNamePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryNamePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryWordsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryWordsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -296,16 +304,12 @@
     <MESSAGE value="Refactoring&#10;- Created classes for new library pages" />
     <MESSAGE value="Added serial event input." />
     <MESSAGE value="Converted reader to Java." />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted reader to Java." />
+    <MESSAGE value="Created first draft working ColorButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created first draft working ColorButton" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HomePage.java</url>
-          <line>164</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LibraryNamePage.java</url>
           <line>81</line>
@@ -313,7 +317,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LibraryNamePage.java</url>
-          <line>131</line>
+          <line>136</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -325,11 +329,6 @@
           <url>file://$PROJECT_DIR$/src/PacketListener.java</url>
           <line>32</line>
           <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/HomePage.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -19,11 +19,6 @@ public class DictionaryNamePage implements Screen{
         checkButtons();
     }
 
-    @Override
-    public void mouseReleased() {
-
-    }
-
     public void keyPressed() {
         if (p.keyCode == 10 || p.keyCode == 16) {
             return;

@@ -13,14 +13,16 @@ public class HomePage implements Screen {
     private PApplet p;
 
     //Declare ColorButton
-    ColorButton a_button;
+    ImgButton exit_button;
 
     public HomePage(PApplet p) {
         this.p = p;
         images = new Images(this.p);
 
-        //initialize the ColorButton
-        a_button = new ColorButton(this.p, 100, 100, 100, 100, "a",p.color(100,20,100));
+        //initialize the ExitButton
+        exit_button = new ImgButton(this.p, Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100), "Exit Button", images.getImage("Exit"));
+
+//        a_button = new ImgButton(this.p, 100, 100, 100, 100, "Exit Button", "Images/Exit.png");
     }
 
     @Override
@@ -30,12 +32,7 @@ public class HomePage implements Screen {
     }
 
     public void mouseOver(){
-        a_button.mouseOver();
-    }
-
-    @Override
-    public void mouseReleased() {
-        checkBackgroundButtons();
+        exit_button.mouseOver();
     }
 
     @Override
@@ -45,6 +42,10 @@ public class HomePage implements Screen {
 
     @Override
     public void checkButtons() {
+
+        //check if the ColorButton was clicked
+        exit_button.buttonPressed();
+
         if (overSelectLibrary()) {
             ArrayList<String> library = loadLibrary();
             HashMap<String,String> dictionary = loadDictionary();
@@ -68,9 +69,6 @@ public class HomePage implements Screen {
             CreatePDF c = new CreatePDF();
             c.Convert();
         }
-
-        //check if the ColorButton was clicked
-        a_button.buttonPressed();
     }
 
     private HashMap<String, String> loadDictionary() {
@@ -106,7 +104,6 @@ public class HomePage implements Screen {
         }
         return dictionary;
     }
-
 
     private void startGame(ArrayList<String> library, HashMap<String, String> dictionary) {
         GamePage game = new GamePage(p, library,dictionary);
@@ -185,10 +182,6 @@ public class HomePage implements Screen {
     public void create() {
         drawBackgroundElements();
         drawPageElements();
-
-        //draw the ColorButton
-
-        a_button.renderButton();
     }
 
     @Override
@@ -200,19 +193,17 @@ public class HomePage implements Screen {
     @Override
     public void drawBackgroundElements() {
         p.image(background(), 0, 0, p.width, p.height);
-        drawExitButton();
+
+        //draws the exit button
+        exit_button.renderButton();
+
         p.image(images.getImage("Logo"), 0, Scaler.sh(10), Scaler.sw(400), Scaler.sh(125));
         p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
     }
 
-    public void drawExitButton() {
-        p.fill(0);
-        p.rect(Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100));
-        p.image(images.getImage("Exit"), Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100));
-    }
-
+    //TODO: Eventually replace once Button has added function parameter capabilities
     public boolean overExit() {
         return p.mouseX > Scaler.sw(1770) && p.mouseY < Scaler.sh(100);
     }

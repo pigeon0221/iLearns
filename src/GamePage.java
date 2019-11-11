@@ -29,11 +29,6 @@ public class GamePage implements TagScreen {
     }
 
     @Override
-    public void mouseReleased() {
-
-    }
-
-    @Override
     public void keyPressed() {
 
     }

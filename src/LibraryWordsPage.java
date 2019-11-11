@@ -29,11 +29,6 @@ public class LibraryWordsPage implements Screen {
     }
 
     @Override
-    public void mouseReleased() {
-
-    }
-
-    @Override
     public void keyPressed() {
         if (p.keyCode == 10 || p.keyCode == 16) {
             return;

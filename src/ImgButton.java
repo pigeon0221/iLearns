@@ -1,26 +1,31 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.core.PShape;
 
+//TODO: Add parameter for the function that gets executed on click (Ex: Exit Button taking in p.exit())
 
-public class ColorButton {
+
+public class ImgButton {
     private int x, y, w, h;
     private String name;
     private int clicks = 0;
+    private String imgPath;
+    private PImage img;
     private PShape thisButton;
     private PApplet p;
     private int stroke = 0;
-    private int color = 0;
     private boolean init = true;
 
     //Constructor
-    public ColorButton(PApplet p, int x, int y, int w, int h, String name, int color) {
+    public ImgButton(PApplet p, int x, int y, int w, int h, String name, PImage img /*String imgPath*/) {
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
         this.name = name;
         this.p = p;
-        this.color = color;
+        this.img = img;
+//        this.imgPath = imgPath;
     }
 
     //Check if the mouse is over the button
@@ -38,11 +43,14 @@ public class ColorButton {
         p.strokeWeight(4);
         if (init) {
             thisButton = p.createShape(p.RECT,x,y,w,h);
-            thisButton.setFill(color);
+            thisButton.setFill(0);
+//            img = p.loadImage(imgPath);
+            img.resize(w, h);
             init = false;
         }
         thisButton.setStroke(stroke);
         p.shape(thisButton);
+        p.image(img, x, y);
     }
 
     //Executes when the mouse moves
