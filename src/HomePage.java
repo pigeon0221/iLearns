@@ -12,13 +12,14 @@ public class HomePage implements Screen {
     Images images;
     private PApplet p;
 
-    //Declare all of the buttons
-    ImgButton exit_button, play_button;
+    //Declare all of the background buttons
+    private ImgButton exit_button, play_button, pause_button, back_button;
 
     public HomePage(PApplet p) {
         this.p = p;
         images = new Images(this.p);
 
+        /* Creates all of the background buttons*/
         //initialize the ExitButton
         exit_button = new ImgButton(this.p, Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100), "Exit Button", images.getImage("Exit"), p.color(0, 0), () -> p.exit());
 
@@ -26,23 +27,27 @@ public class HomePage implements Screen {
         play_button = new ImgButton(this.p, 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80), "Play Button", images.getImage("PlayButton"), p.color(255, 0), new BtnFunction() {
             @Override
             public void execute() {
-                System.out.println("Clicked Play Button");
+                System.out.println("Play Button action here");
             }
         });
 
+        //initialize the PauseButton
+        pause_button = new ImgButton(this.p, Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80), "Pause Button", images.getImage("PauseButton"), p.color(255, 0), () -> System.out.println("Pause Button action here"));
 
-//        a_button = new ImgButton(this.p, 100, 100, 100, 100, "Exit Button", "Images/Exit.png");
+        back_button = new ImgButton(this.p, Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80), "Back Button", images.getImage("BackButton"), p.color(255, 0), () -> System.out.println("Back Button action here"));
     }
 
     @Override
     public void mousePressed() {
-        checkBackgroundButtons();
+//        checkBackgroundButtons();
         checkButtons();
     }
 
     public void mouseOver(){
         exit_button.mouseOver();
         play_button.mouseOver();
+        pause_button.mouseOver();
+        back_button.mouseOver();
     }
 
     @Override
@@ -56,6 +61,8 @@ public class HomePage implements Screen {
         //check if the ColorButton was clicked
         exit_button.buttonPressed();
         play_button.buttonPressed();
+        pause_button.buttonPressed();
+        back_button.buttonPressed();
 
         if (overSelectLibrary()) {
             ArrayList<String> library = loadLibrary();
@@ -158,20 +165,20 @@ public class HomePage implements Screen {
 //        if (overExit()) {
 //            p.exit();
 //        }
-        if (overPause()) {
-            //
-            //TODO: Stop music when play button is clicked
-            //
-        }
-        if (overBackButton()) {
-            //Do Nothing .. Already on HomePage
-
-        }
-        if (overPlay()) {
-            //
-            //TODO: Plays music when play button is clicked
-            //
-        }
+//        if (overPause()) {
+//            //
+//            //TODO: Stop music when play button is clicked
+//            //
+//        }
+//        if (overBackButton()) {
+//            //Do Nothing .. Already on HomePage
+//
+//        }
+//        if (overPlay()) {
+//            //
+//            //TODO: Plays music when play button is clicked
+//            //
+//        }
     }
 
     @Override
@@ -208,36 +215,35 @@ public class HomePage implements Screen {
         //draws the buttons
         exit_button.renderButton();
         play_button.renderButton();
+        pause_button.renderButton();
+        back_button.renderButton();
 
         p.image(images.getImage("Logo"), 0, Scaler.sh(10), Scaler.sw(400), Scaler.sh(125));
-        p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
-        p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
     }
-
-    //TODO: Eventually replace once Button has added function parameter capabilities
 
 //    public boolean overExit() {
 //        return p.mouseX > Scaler.sw(1770) && p.mouseY < Scaler.sh(100);
 //    }
 
-    public boolean overPlay() {
-        return p.mouseX < Scaler.sw(80) && p.mouseY > Scaler.sh(900);
-    }
+//    public boolean overPlay() {
+//        return p.mouseX < Scaler.sw(80) && p.mouseY > Scaler.sh(900);
+//    }
+//
+//    public boolean overPause() {
+//        return p.mouseX > Scaler.sw(80) && p.mouseX < Scaler.sw(160) && p.mouseY > Scaler.sh(900);
+//    }
 
-    public boolean overPause() {
-        return p.mouseX > Scaler.sw(80) && p.mouseX < Scaler.sw(160) && p.mouseY > Scaler.sh(900);
-    }
+//    public boolean overBackButton() {
+//        return p.mouseX > Scaler.sw(1840) && p.mouseY > Scaler.sh(900);
+//    }
 
+    //TODO: Eventually replace once Button has added function parameter capabilities
     public boolean overSelectLibrary() {
         return p.mouseX > Scaler.sw(818) && p.mouseX < Scaler.sw(1097) && p.mouseY > Scaler.sh(457) && p.mouseY < Scaler.sh(500);
     }
 
     public boolean overCreateLibrary() {
         return p.mouseX > Scaler.sw(808) && p.mouseX < Scaler.sw(1108) && p.mouseY > Scaler.sh(560) && p.mouseY < Scaler.sh(610);
-    }
-
-    public boolean overBackButton() {
-        return p.mouseX > Scaler.sw(1840) && p.mouseY > Scaler.sh(900);
     }
 
     private boolean overCreateDictionary() {

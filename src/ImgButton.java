@@ -35,7 +35,7 @@ public class ImgButton {
     //Check if the mouse is over the button
     private boolean mouseOverButton() {
         if((p.mouseX >= x && p.mouseX < x + w) && (p.mouseY >= y && p.mouseY < y + h)){
-            System.out.println("The mouse is over " + name);
+//            System.out.println("The mouse is over " + name);
             return true;
         }
 //        System.out.println("The mouse is off");
