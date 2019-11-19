@@ -13,11 +13,13 @@ public class ImgButton {
     private PImage img;
     private PShape thisButton;
     private PApplet p;
+    private int fill;
+    private BtnFunction fn;
     private int stroke = 0;
     private boolean init = true;
 
     //Constructor
-    public ImgButton(PApplet p, int x, int y, int w, int h, String name, PImage img /*String imgPath*/) {
+    public ImgButton(PApplet p, int x, int y, int w, int h, String name, PImage img /*String imgPath*/, int fill, BtnFunction fn) {
         this.x = x;
         this.y = y;
         this.w = w;
@@ -26,6 +28,8 @@ public class ImgButton {
         this.p = p;
         this.img = img;
 //        this.imgPath = imgPath;
+        this.fill = fill;
+        this.fn = fn;
     }
 
     //Check if the mouse is over the button
@@ -43,7 +47,7 @@ public class ImgButton {
         p.strokeWeight(4);
         if (init) {
             thisButton = p.createShape(p.RECT,x,y,w,h);
-            thisButton.setFill(0);
+            thisButton.setFill(fill);
 //            img = p.loadImage(imgPath);
             img.resize(w, h);
             init = false;
@@ -67,7 +71,8 @@ public class ImgButton {
     //Executes when button is pressed
     void buttonPressed() {
         if(this.mouseOverButton()){
-            System.out.println("The mouse is pressed on Button: " + name + " for: " + this.get_clicks() + " times");
+            System.out.println("The mouse is pressed on Button: '" + name + "' for: " + this.get_clicks() + " times");
+            fn.execute();
         }
         p.redraw();
     }

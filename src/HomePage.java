@@ -12,15 +12,24 @@ public class HomePage implements Screen {
     Images images;
     private PApplet p;
 
-    //Declare ColorButton
-    ImgButton exit_button;
+    //Declare all of the buttons
+    ImgButton exit_button, play_button;
 
     public HomePage(PApplet p) {
         this.p = p;
         images = new Images(this.p);
 
         //initialize the ExitButton
-        exit_button = new ImgButton(this.p, Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100), "Exit Button", images.getImage("Exit"));
+        exit_button = new ImgButton(this.p, Scaler.sw(1770), 0, Scaler.sw(150), Scaler.sh(100), "Exit Button", images.getImage("Exit"), p.color(0, 0), () -> p.exit());
+
+        //initialize the PlayButton
+        play_button = new ImgButton(this.p, 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80), "Play Button", images.getImage("PlayButton"), p.color(255, 0), new BtnFunction() {
+            @Override
+            public void execute() {
+                System.out.println("Clicked Play Button");
+            }
+        });
+
 
 //        a_button = new ImgButton(this.p, 100, 100, 100, 100, "Exit Button", "Images/Exit.png");
     }
@@ -33,6 +42,7 @@ public class HomePage implements Screen {
 
     public void mouseOver(){
         exit_button.mouseOver();
+        play_button.mouseOver();
     }
 
     @Override
@@ -45,6 +55,7 @@ public class HomePage implements Screen {
 
         //check if the ColorButton was clicked
         exit_button.buttonPressed();
+        play_button.buttonPressed();
 
         if (overSelectLibrary()) {
             ArrayList<String> library = loadLibrary();
@@ -144,9 +155,9 @@ public class HomePage implements Screen {
 
     @Override
     public void checkBackgroundButtons() {
-        if (overExit()) {
-            p.exit();
-        }
+//        if (overExit()) {
+//            p.exit();
+//        }
         if (overPause()) {
             //
             //TODO: Stop music when play button is clicked
@@ -194,19 +205,20 @@ public class HomePage implements Screen {
     public void drawBackgroundElements() {
         p.image(background(), 0, 0, p.width, p.height);
 
-        //draws the exit button
+        //draws the buttons
         exit_button.renderButton();
+        play_button.renderButton();
 
         p.image(images.getImage("Logo"), 0, Scaler.sh(10), Scaler.sw(400), Scaler.sh(125));
-        p.image(images.getImage("PlayButton"), 0, Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("PauseButton"), Scaler.sw(80), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
         p.image(images.getImage("BackButton"), Scaler.sw(1840), Scaler.sh(900), Scaler.sw(80), Scaler.sh(80));
     }
 
     //TODO: Eventually replace once Button has added function parameter capabilities
-    public boolean overExit() {
-        return p.mouseX > Scaler.sw(1770) && p.mouseY < Scaler.sh(100);
-    }
+
+//    public boolean overExit() {
+//        return p.mouseX > Scaler.sw(1770) && p.mouseY < Scaler.sh(100);
+//    }
 
     public boolean overPlay() {
         return p.mouseX < Scaler.sw(80) && p.mouseY > Scaler.sh(900);
