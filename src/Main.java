@@ -1,6 +1,8 @@
 import com.fazecast.jSerialComm.SerialPort;
 import processing.core.PApplet;
+
 import javax.swing.JOptionPane;
+import java.io.*;
 
 
 /*
@@ -27,39 +29,70 @@ public class Main extends PApplet {
 
     // Connects to the USB reader if it is connected and continues game. If not the game exits.
     public static void main(String[] args) {
-        boolean USBConnected = true;
-          SerialPort[] comPort = SerialPort.getCommPorts();
-          if(comPort.length!=0){
-              for (SerialPort s:comPort){
-                  if(s.toString().contains("FT232R USB UART")){
-                        USBConnected=true;
-                        s.openPort();
-                        PacketListener listener = new PacketListener();
-                        s.addDataListener(listener);
-                        break;
-                  }
-              }
-          }
-          if(!USBConnected){
-              JOptionPane.showMessageDialog(null,
-                      "NO USB Reader Connected, please connect and restart ILearns",
-                      "ILearns: ERROR",
-                      JOptionPane.WARNING_MESSAGE);
-              System.exit(0);
-          }
+        boolean USBConnected = checkConfigFile();
+        SerialPort[] comPort = SerialPort.getCommPorts();
+        if (comPort.length != 0) {
+            for (SerialPort s : comPort) {
+                if (s.toString().contains("FT232R USB UART")) {
+                    USBConnected = true;
+                    s.openPort();
+                    PacketListener listener = new PacketListener();
+                    s.addDataListener(listener);
+                    break;
+                }
+            }
+        }
+        if (!USBConnected) {
+            JOptionPane.showMessageDialog(null,
+                    "NO USB Reader Connected, please connect and restart ILearns",
+                    "ILearns: ERROR",
+                    JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
+        }
         PApplet.main("Main");
+    }
+
+    private static boolean checkConfigFile() {
+        try (BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+ File.separator+ "config.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if(line.contains("#")){
+                    continue;
+                }
+                else{
+                    String[] split = line.split("=");
+                    String command = split[0].trim();
+                    String parameter = split[1].trim();
+                    if(command.equals("Debug")){
+                        if(parameter.toLowerCase().equals("false")){
+                            return false;
+                        }
+                        else {
+                            return true;
+                        }
+                    }
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     /*
     Defines settings for the PApplet.
      */
     public void settings() {
+        fullScreen();
         Scaler.setScalerWidth(parseFloat(displayWidth));
         Scaler.setScalerHeight(parseFloat(displayHeight));
         populateScreens();
         setCurrentScreen();
         currentScreen.setVisibility(true);
     }
+
     /*
     Setup for the PApplet.
      */
@@ -72,11 +105,12 @@ public class Main extends PApplet {
      */
     public void draw() {
         checkUSBConnection();
-        if(!currentScreen.getVisibility()) {
+        if (!currentScreen.getVisibility()) {
             currentScreen = screens.getActiveScreen();
         }
         currentScreen.create();
     }
+
     /*
     Key listener. Calls the currently active screens keyPressed method.
      */
@@ -88,7 +122,7 @@ public class Main extends PApplet {
     Mouse listener. Calls the currently active screens mousePressed method.
      */
     public void mousePressed() {
-        System.out.println(mouseX+","+mouseY);
+        System.out.println(mouseX + "," + mouseY);
         GameEffects.playClickSound();
         currentScreen.mousePressed();
     }
@@ -114,15 +148,15 @@ public class Main extends PApplet {
     private void checkUSBConnection() {
         boolean USBConnected = true;
         SerialPort[] comPort = SerialPort.getCommPorts();
-        if(comPort.length!=0){
-            for (SerialPort s:comPort){
-                if(s.toString().contains("FT232R USB UART")){
-                    USBConnected=true;
+        if (comPort.length != 0) {
+            for (SerialPort s : comPort) {
+                if (s.toString().contains("FT232R USB UART")) {
+                    USBConnected = true;
                     break;
                 }
             }
         }
-        if(!USBConnected){
+        if (!USBConnected) {
             JOptionPane.showMessageDialog(null,
                     "USB DISCONNECTED, Please reconnect and restart ILearns",
                     "ILearns: ERROR",
