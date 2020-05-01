@@ -8,12 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Create Jar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns/iLearns.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/iLearns/iLearns.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iLearns/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns/iLearns.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +167,7 @@
       <workItem from="1583355652753" duration="5883000" />
       <workItem from="1588364205841" duration="2124000" />
       <workItem from="1588366966167" duration="1578000" />
-      <workItem from="1588368734135" duration="1098000" />
+      <workItem from="1588368734135" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -293,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588369363575</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Create Jar">
+      <created>1588370047878</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1588370047878</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,11 +370,15 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="641" y="423" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1583361608949" />
-    <state x="459" y="23" width="710" height="1057" key="CommitChangelistDialog2" timestamp="1588369363468">
+    <state x="459" y="23" width="710" height="1057" key="CommitChangelistDialog2" timestamp="1588370105837">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="459" y="23" width="710" height="1057" key="CommitChangelistDialog2/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588369363468" />
+    <state x="459" y="23" width="710" height="1057" key="CommitChangelistDialog2/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588370105837" />
     <state x="481" y="1222" key="CommitChangelistDialog2/53.1103.1792.1033/0.23.1920.1057@53.1103.1792.1033" timestamp="1588364582051" />
+    <state x="42" y="118" key="DiffContextDialog" timestamp="1588370101045">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="42" y="118" key="DiffContextDialog/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588370101045" />
     <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1588369882177">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -470,10 +476,10 @@
     </state>
     <state x="430" y="140" key="SettingsEditor/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588368680473" />
     <state x="454" y="1217" key="SettingsEditor/53.1103.1792.1033/0.23.1920.1057@53.1103.1792.1033" timestamp="1588365897007" />
-    <state x="531" y="285" key="Vcs.Push.Dialog.v2" timestamp="1588369365188">
+    <state x="531" y="285" key="Vcs.Push.Dialog.v2" timestamp="1588370049144">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="531" y="285" key="Vcs.Push.Dialog.v2/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588369365188" />
+    <state x="531" y="285" key="Vcs.Push.Dialog.v2/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588370049144" />
     <state x="549" y="1359" key="Vcs.Push.Dialog.v2/53.1103.1792.1033/0.23.1920.1057@53.1103.1792.1033" timestamp="1588364584725" />
     <state x="614" y="390" key="com.intellij.ide.util.TipDialog" timestamp="1588366972110">
       <screen x="0" y="23" width="1920" height="1057" />
