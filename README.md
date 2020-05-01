@@ -5,7 +5,7 @@
 - https://www.java.com/en/download/
 ###How To Run ILearns Application 
 1. Download the zip from the following link
-    2. 
+    2. https://mega.nz/file/a2wiBCDL#y9cXDllEHOjMjHEjy4z8P3v7Bih7kwgm9GIXTaLCo-U
 2. Unzip the folder.
 3. Double click "ILearns.Jar"
 
