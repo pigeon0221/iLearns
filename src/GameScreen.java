@@ -1,13 +1,12 @@
 import processing.core.PApplet;
 import processing.core.PImage;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class GamePage implements TagScreen {
+public class GameScreen implements TagScreen {
     public boolean visibility = false;
-    Pages pages = new Pages();
+    Screens screens = new Screens();
     Images images;
     int level = 1;
     ArrayList<String> library = new ArrayList<>();
@@ -15,7 +14,7 @@ public class GamePage implements TagScreen {
     private PApplet p;
     String scannerInput = "";
 
-    public GamePage(PApplet p, ArrayList<String> lib, HashMap<String, String> dic) {
+    public GameScreen(PApplet p, ArrayList<String> lib, HashMap<String, String> dic) {
         this.p = p;
         images = new Images(this.p);
         library = lib;
@@ -71,7 +70,7 @@ public class GamePage implements TagScreen {
         }
         if (overBackButton()) {
             visibility = false;
-            pages.getPage("HomePage").setVisibility(true);
+            screens.getScreen("HomeScreen").setVisibility(true);
 
         }
         if (overPlay()) {
@@ -100,11 +99,11 @@ public class GamePage implements TagScreen {
     @Override
     public void create() {
         drawBackgroundElements();
-        drawPageElements();
+        drawScreenElements();
     }
 
     @Override
-    public void drawPageElements() {
+    public void drawScreenElements() {
         p.fill(255);
         p.textSize(Scaler.sh(50));
         p.text("Level " + level, Scaler.sw(860), Scaler.sh(70));

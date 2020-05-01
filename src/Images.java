@@ -2,14 +2,22 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 import java.util.HashMap;
-
+/*
+Class for loading/displaying images in processing.
+All images are loaded here and stored in a HashMap for easy access.
+ */
 public class Images {
     public static HashMap<String, PImage> images = new HashMap<>();
     private PApplet p;
+
+    // Constructor to load images into HashMap
     public Images(PApplet p) {
         this.p = p;
         loadImages();
     }
+
+    // Loads all individual images from Images folder.
+    // Add new images here to access in other parts of the code.
     public void loadImages(){
         images.put("PlayButton",p.loadImage("Images/playButton.png"));
         images.put("PauseButton", p.loadImage("Images/pauseButton.png"));
@@ -32,6 +40,8 @@ public class Images {
         images.put("DictionaryWord",p.loadImage("Images/DictionaryWord.png"));
         images.put("PDFButton",p.loadImage("Images/PDFButton.png"));
     }
+
+    // Returns an image given an image name.
     public PImage getImage(String imageName){
         return images.getOrDefault(imageName,images.get("Error"));
     }

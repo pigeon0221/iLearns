@@ -4,20 +4,20 @@ import processing.core.PImage;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class DictionaryWordPage implements TagScreen {
+public class DictionaryWordScreen implements TagScreen {
     public boolean visibility = false;
-    Pages pages = new Pages();
+    Screens screens = new Screens();
     Images images;
     PrintWriter writer;
     String wordInput = "";
     String tag = "";
     private PApplet p;
 
-    public DictionaryWordPage(PApplet p, String fileName) {
+    public DictionaryWordScreen(PApplet p, String fileName) {
         this.p = p;
         images = new Images(this.p);
         try {
-            writer = new PrintWriter("Dictionary/" + fileName + ".txt");
+            writer = new PrintWriter("Dictionaries/" + fileName + ".txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -59,7 +59,7 @@ public class DictionaryWordPage implements TagScreen {
             if (overNextButton()) {
                 writer.close();
                 visibility = false;
-                pages.getPage("HomePage").setVisibility(true);
+                screens.getScreen("HomeScreen").setVisibility(true);
             }
         }
     }
@@ -76,7 +76,7 @@ public class DictionaryWordPage implements TagScreen {
         }
         if (overBackButton()) {
             visibility = false;
-            pages.getPage("HomePage").setVisibility(true);
+            screens.getScreen("HomeScreen").setVisibility(true);
 
         }
         if (overPlay()) {
@@ -104,11 +104,11 @@ public class DictionaryWordPage implements TagScreen {
     @Override
     public void create() {
         drawBackgroundElements();
-        drawPageElements();
+        drawScreenElements();
     }
 
     @Override
-    public void drawPageElements() {
+    public void drawScreenElements() {
         if(tag.equals("")) {
             p.image(images.getImage("ScanRFID"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
 

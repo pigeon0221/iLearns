@@ -6,13 +6,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class HomePage implements Screen {
+public class HomeScreen implements Screen {
     public boolean visibility = false;
-    Pages pages = new Pages();
+    Screens screens = new Screens();
     Images images;
     private PApplet p;
 
-    public HomePage(PApplet p) {
+    public HomeScreen(PApplet p) {
         this.p = p;
         images = new Images(this.p);
     }
@@ -39,15 +39,15 @@ public class HomePage implements Screen {
         }
         if (overCreateLibrary()) {
             visibility = false;
-            Screen LibraryNamePage = new LibraryNamePage(p);
-            pages.setPage("LibraryNamePage", LibraryNamePage);
-            pages.getPage("LibraryNamePage").setVisibility(true);
+            Screen LibraryNameScreen = new LibraryNameScreen(p);
+            screens.addScreen("LibraryNameScreen", LibraryNameScreen);
+            screens.getScreen("LibraryNameScreen").setVisibility(true);
         }
         if (overCreateDictionary()) {
             visibility = false;
-            Screen DictionaryNamePage = new DictionaryNamePage(p);
-            pages.setPage("DictionaryNamePage", DictionaryNamePage);
-            pages.getPage("DictionaryNamePage").setVisibility(true);
+            Screen DictionaryNameScreen = new DictionaryNameScreen(p);
+            screens.addScreen("DictionaryNameScreen", DictionaryNameScreen);
+            screens.getScreen("DictionaryNameScreen").setVisibility(true);
         }
         if (overDownloadPDF()){
             CreatePDF c = new CreatePDF();
@@ -57,10 +57,10 @@ public class HomePage implements Screen {
 
     private HashMap<String, String> loadDictionary() {
         JOptionPane.showMessageDialog(null,
-                "Please select a dictionary.",
+                "Please select which Dictionary you would to use..",
                 "ILearns",
                 JOptionPane.PLAIN_MESSAGE);
-        File workingDirectory = new File(System.getProperty("user.dir")+File.separator+"Dictionary");
+        File workingDirectory = new File(System.getProperty("user.dir")+File.separator+"Dictionaries");
         JFileChooser chooser = new JFileChooser();
         chooser.setCurrentDirectory(workingDirectory);
         int result = chooser.showSaveDialog(null);
@@ -91,11 +91,12 @@ public class HomePage implements Screen {
 
 
     private void startGame(ArrayList<String> library, HashMap<String, String> dictionary) {
-        GamePage game = new GamePage(p, library,dictionary);
-        game.setVisibility(true);
+        GameScreen gameScreen = new GameScreen(p, library,dictionary);
+        gameScreen.setVisibility(true);
         visibility = false;
-        pages.setPage("GamePage", game);
+        screens.addScreen("GameScreen", gameScreen);
     }
+
 
     private ArrayList<String> loadLibrary() {
         JOptionPane.showMessageDialog(null,
@@ -117,9 +118,6 @@ public class HomePage implements Screen {
                 gameWords.add(line.trim());
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return null;
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -138,7 +136,7 @@ public class HomePage implements Screen {
             //
         }
         if (overBackButton()) {
-            //Do Nothing .. Already on HomePage
+            //Do Nothing .. Already on HomeScreen
 
         }
         if (overPlay()) {
@@ -166,11 +164,11 @@ public class HomePage implements Screen {
     @Override
     public void create() {
         drawBackgroundElements();
-        drawPageElements();
+        drawScreenElements();
     }
 
     @Override
-    public void drawPageElements() {
+    public void drawScreenElements() {
         p.image(images.getImage("Menu"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
         p.image(images.getImage("PDFButton"),Scaler.sw(0), Scaler.sh(800), Scaler.sw(300), Scaler.sh(100));
     }

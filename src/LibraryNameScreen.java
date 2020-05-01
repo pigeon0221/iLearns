@@ -1,14 +1,14 @@
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class LibraryNamePage implements Screen {
+public class LibraryNameScreen implements Screen {
     public boolean visibility = false;
-    Pages pages = new Pages();
+    Screens screens = new Screens();
     Images images;
     String nameInput = "";
     private PApplet p;
 
-    public LibraryNamePage(PApplet p) {
+    public LibraryNameScreen(PApplet p) {
         this.p = p;
         images = new Images(this.p);
     }
@@ -40,10 +40,10 @@ public class LibraryNamePage implements Screen {
                 return;
             }
             else {
-                Screen LibraryWordsPage = new LibraryWordsPage(p, nameInput);
-                pages.setPage("LibraryWordsPage", LibraryWordsPage);
+                Screen LibraryWordScreen = new LibraryWordsScreen(p, nameInput);
+                screens.addScreen("LibraryWordScreen", LibraryWordScreen);
                 visibility = false;
-                pages.getPage("LibraryWordsPage").setVisibility(true);
+                screens.getScreen("LibraryWordScreen").setVisibility(true);
             }
         }
     }
@@ -66,11 +66,11 @@ public class LibraryNamePage implements Screen {
     @Override
     public void create() {
         drawBackgroundElements();
-        drawPageElements();
+        drawScreenElements();
     }
 
     @Override
-    public void drawPageElements() {
+    public void drawScreenElements() {
         p.image(images.getImage("LibraryNameMenu"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
         p.fill(255);
         p.textSize(Scaler.sh(50));
@@ -105,7 +105,7 @@ public class LibraryNamePage implements Screen {
         }
         if (overBackButton()) {
             visibility = false;
-            pages.getPage("HomePage").setVisibility(true);
+            screens.getScreen("HomeScreen").setVisibility(true);
 
         }
         if (overPlay()) {

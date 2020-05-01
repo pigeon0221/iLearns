@@ -1,27 +1,34 @@
 import com.fazecast.jSerialComm.SerialPort;
-import javazoom.jl.decoder.JavaLayerException;
-import javazoom.jl.player.Player;
 import processing.core.PApplet;
-import processing.core.PImage;
-
-import javax.swing.*;
-import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
 
+
+/*
+Main class for game. Main extends PApplet which is a processing applet. Processing is a java library for
+creating visuals that the entire codebase is centered around.
+
+PApplets contain 3 required methods:
+
+        settings: Where settings are set before the code runs/draws.
+        setup: Similar to setup but runs once settings is complete.
+        draw: A continuously looping method for drawing screen elements.
+
+The Main also includes the following non required methods from PApplet:
+
+    keyPressed: A key listener for PApplets
+    mousePressed: A mouse listener for PApplets.
+
+The main class contains no code for the individual screen implementations but instead will determine what screen
+is active and call it's local methods.
+ */
 public class Main extends PApplet {
-    private static Player player;
-    private static boolean onNamePage = false;
-    Pages pages = new Pages();
-    private Screen currentPage;
+    Screens screens = new Screens();    // Creates new Screens object
+    private Screen currentScreen;       // Creates a screen called currentScreen which maps to the whichever screen is currently active.
 
-
+    // Connects to the USB reader if it is connected and continues game. If not the game exits.
     public static void main(String[] args) {
         boolean USBConnected = true;
-          SerialPort comPort[] = SerialPort.getCommPorts();
+          SerialPort[] comPort = SerialPort.getCommPorts();
           if(comPort.length!=0){
               for (SerialPort s:comPort){
                   if(s.toString().contains("FT232R USB UART")){
@@ -43,38 +50,70 @@ public class Main extends PApplet {
         PApplet.main("Main");
     }
 
+    /*
+    Defines settings for the PApplet.
+     */
     public void settings() {
-        fullScreen();
         Scaler.setScalerWidth(parseFloat(displayWidth));
         Scaler.setScalerHeight(parseFloat(displayHeight));
-        populatePages();
-        setCurrentPage();
-        currentPage.setVisibility(true);
+        populateScreens();
+        setCurrentScreen();
+        currentScreen.setVisibility(true);
     }
-
-    private void setCurrentPage() {
-        currentPage = pages.getPage("HomePage");
-    }
-
-    private void populatePages() {
-        Screen HomePage = new HomePage(this);
-        pages.setPage("HomePage", HomePage);
-    }
-
+    /*
+    Setup for the PApplet.
+     */
     public void setup() {
         surface.setResizable(true);
     }
 
-
+    /*
+    Draw code for the PApplet. Finds what page is currently active and calls it's local create method.
+     */
     public void draw() {
         checkUSBConnection();
-        currentPage=pages.getActivePage();
-        currentPage.create();
+        if(!currentScreen.getVisibility()) {
+            currentScreen = screens.getActiveScreen();
+        }
+        currentScreen.create();
+    }
+    /*
+    Key listener. Calls the currently active screens keyPressed method.
+     */
+    public void keyPressed() {
+        currentScreen.keyPressed();
     }
 
+    /*
+    Mouse listener. Calls the currently active screens mousePressed method.
+     */
+    public void mousePressed() {
+        System.out.println(mouseX+","+mouseY);
+        GameEffects.playClickSound();
+        currentScreen.mousePressed();
+    }
+
+    /*
+    Sets the currentScreen = HomeScreen
+     */
+    private void setCurrentScreen() {
+        currentScreen = screens.getScreen("HomeScreen");
+    }
+
+    /*
+    Creates the HomeScreen and adds it to screens.
+     */
+    private void populateScreens() {
+        Screen HomeScreen = new HomeScreen(this);
+        screens.addScreen("HomeScreen", HomeScreen);
+    }
+
+    /*
+    Checks if the USB reader is connected to a serial port
+     */
     private void checkUSBConnection() {
         boolean USBConnected = true;
-        SerialPort comPort[] = SerialPort.getCommPorts();
+        SerialPort[] comPort = SerialPort.getCommPorts();
         if(comPort.length!=0){
             for (SerialPort s:comPort){
                 if(s.toString().contains("FT232R USB UART")){
@@ -92,13 +131,4 @@ public class Main extends PApplet {
         }
     }
 
-    public void keyPressed() {
-        currentPage.keyPressed();
-    }
-
-    public void mousePressed() {
-        System.out.println(mouseX+","+mouseY);
-        GameEffects.playClickSound();
-        currentPage.mousePressed();
-    }
 }

@@ -4,15 +4,15 @@ import processing.core.PImage;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class LibraryWordsPage implements Screen {
+public class LibraryWordsScreen implements Screen {
     public boolean visibility = false;
-    Pages pages = new Pages();
+    Screens screens = new Screens();
     Images images;
     PrintWriter writer;
     String wordInput = "";
     private PApplet p;
 
-    public LibraryWordsPage(PApplet p, String fileName) {
+    public LibraryWordsScreen(PApplet p, String fileName) {
         this.p = p;
         images = new Images(this.p);
         try {
@@ -54,7 +54,7 @@ public class LibraryWordsPage implements Screen {
         if (overSaveLibrary()) {
             writer.close();
             visibility = false;
-            pages.getPage("HomePage").setVisibility(true);
+            screens.getScreen("HomeScreen").setVisibility(true);
         }
     }
 
@@ -70,7 +70,7 @@ public class LibraryWordsPage implements Screen {
         }
         if (overBackButton()) {
             visibility = false;
-            pages.getPage("HomePage").setVisibility(true);
+            screens.getScreen("HomeScreen").setVisibility(true);
 
         }
         if (overPlay()) {
@@ -98,11 +98,11 @@ public class LibraryWordsPage implements Screen {
     @Override
     public void create() {
         drawBackgroundElements();
-        drawPageElements();
+        drawScreenElements();
     }
 
     @Override
-    public void drawPageElements() {
+    public void drawScreenElements() {
         p.image(images.getImage("LibraryWordMenu"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
         p.fill(255);
         p.textSize(Scaler.sh(50));

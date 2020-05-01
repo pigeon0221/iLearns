@@ -4,7 +4,7 @@ import javazoom.jl.player.Player;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 /*
-Static Methods of common game effects
+Static Methods of common game effects.
  */
 public class GameEffects {
     //Plays a click sound effect
@@ -14,9 +14,7 @@ public class GameEffects {
             Player player = new Player(fileInputStream);
             player.play();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (JavaLayerException e) {
+        } catch (FileNotFoundException | JavaLayerException e) {
             e.printStackTrace();
         }
 

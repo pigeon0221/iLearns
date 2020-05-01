@@ -1,14 +1,14 @@
 import processing.core.PApplet;
 import processing.core.PImage;
 
-public class DictionaryNamePage implements Screen{
+public class DictionaryNameScreen implements Screen{
     public boolean visibility = false;
-    Pages pages = new Pages();
+    Screens screens = new Screens();
     Images images;
     String nameInput = "";
     private PApplet p;
 
-    public DictionaryNamePage(PApplet p) {
+    public DictionaryNameScreen(PApplet p) {
         this.p = p;
         images = new Images(this.p);
     }
@@ -40,10 +40,10 @@ public class DictionaryNamePage implements Screen{
                 return;
             }
             else {
-                Screen DictionaryWordPage = new DictionaryWordPage(p, nameInput);
-                pages.setPage("DictionaryWordPage", DictionaryWordPage);
+                Screen DictionaryWordPage = new DictionaryWordScreen(p, nameInput);
+                screens.addScreen("DictionaryWordPage", DictionaryWordPage);
                 visibility = false;
-                pages.getPage("DictionaryWordPage").setVisibility(true);
+                screens.getScreen("DictionaryWordPage").setVisibility(true);
             }
         }
     }
@@ -66,11 +66,11 @@ public class DictionaryNamePage implements Screen{
     @Override
     public void create() {
         drawBackgroundElements();
-        drawPageElements();
+        drawScreenElements();
     }
 
     @Override
-    public void drawPageElements() {
+    public void drawScreenElements() {
         p.image(images.getImage("DictionaryNameMenu"), Scaler.sw(760), Scaler.sh(340), Scaler.sw(400), Scaler.sh(400));
         p.fill(255);
         p.textSize(Scaler.sh(50));
@@ -105,7 +105,7 @@ public class DictionaryNamePage implements Screen{
         }
         if (overBackButton()) {
             visibility = false;
-            pages.getPage("HomePage").setVisibility(true);
+            screens.getScreen("HomeScreen").setVisibility(true);
 
         }
         if (overPlay()) {

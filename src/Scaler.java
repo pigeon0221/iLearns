@@ -1,7 +1,9 @@
 import processing.core.PApplet;
 
 import java.util.HashMap;
-
+/*
+Static class for scaling all pixel values. 
+ */
 public class Scaler {
     private static float scaleH;
     private static float scaleW;

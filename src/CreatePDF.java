@@ -7,8 +7,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-
+/*
+Converts a text file to PDF.
+ */
 public class CreatePDF{
+    /*
+    Convert is a function which prompts the user to select a txt file and will then convert it to PDF.
+    User chooses the file via a JOptionPane window.
+     */
     void Convert(){
         JOptionPane.showMessageDialog(null,
                 "Select the library you want to save as PDF.",
