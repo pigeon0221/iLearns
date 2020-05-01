@@ -1,2 +1,0 @@
-#If debug is set to FALSE the ILearns reader must be connected.
-Debug=false

@@ -6,18 +6,44 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Refactored all code">
-      <change afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/iLearns_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/iLearns_jar.xml" afterDir="false" />
+    <list default="true" id="1444b47f-1ffb-4944-85e7-40b7e2a487e8" name="Default" comment="Create Jar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Fonts/SqueakyChalkSound.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/DictionaryName.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/DictionaryWord.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/ERROR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/Exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/LibraryName.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/LibraryWords.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/PDFButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/ScanRFID.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/backButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/backWordButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/cartoonB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/cute-ghost.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/goodjob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/incorrect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/nextWordButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/pauseButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/playButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/reset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/saveButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/sun.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Images/wordBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Jars/core.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Jars/itextpdf-5.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Jars/jSerialComm-2.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Jars/jl1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Libraries/Test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Music/Kids_Music.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Music/button.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Music/farewell_226883231_soundcloud.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/Music/yayEffect.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/config.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/iLearns_jar/iLearns.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/GameEffects.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Images.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/iLearns/Screen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +100,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/Jars" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/iLearns_jar" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.245" />
     <property name="project.structure.side.proportion" value="0.15151513" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -175,7 +201,7 @@
       <workItem from="1582749142018" duration="1634000" />
       <workItem from="1583355652753" duration="5883000" />
       <workItem from="1588364205841" duration="2124000" />
-      <workItem from="1588366966167" duration="1055000" />
+      <workItem from="1588366966167" duration="1578000" />
     </task>
     <task id="LOCAL-00001" summary="Added Conference folder">
       <created>1554490104247</created>
@@ -275,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588364582293</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Create Jar">
+      <created>1588368395324</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1588368395324</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +363,8 @@
     <MESSAGE value="Added convert to pdf" />
     <MESSAGE value="Added jar" />
     <MESSAGE value="Refactored all code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored all code" />
+    <MESSAGE value="Create Jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Jar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="703" y="1426" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588365530692">
@@ -349,9 +383,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="641" y="423" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1583361608949" />
-    <state x="481" y="1222" key="CommitChangelistDialog2" timestamp="1588364582051">
-      <screen x="53" y="1103" width="1792" height="1033" />
+    <state x="459" y="145" key="CommitChangelistDialog2" timestamp="1588368394931">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="459" y="145" key="CommitChangelistDialog2/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588368394931" />
     <state x="481" y="1222" key="CommitChangelistDialog2/53.1103.1792.1033/0.23.1920.1057@53.1103.1792.1033" timestamp="1588364582051" />
     <state width="1750" height="285" key="GridCell.Tab.0.bottom" timestamp="1588368159059">
       <screen x="0" y="23" width="1920" height="1057" />
@@ -445,13 +480,15 @@
     <state width="1750" height="279" key="GridCell.Tab.1.right/0.23.1792.1009@0.23.1792.1009" timestamp="1583362943509" />
     <state width="1750" height="279" key="GridCell.Tab.1.right/0.23.1792.1012@0.23.1792.1012" timestamp="1583362861144" />
     <state width="1358" height="324" key="GridCell.Tab.1.right/0.23.1792.1020@0.23.1792.1020" timestamp="1582750156802" />
-    <state x="454" y="1217" key="SettingsEditor" timestamp="1588365897007">
-      <screen x="53" y="1103" width="1792" height="1033" />
+    <state x="430" y="140" key="SettingsEditor" timestamp="1588368680473">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="430" y="140" key="SettingsEditor/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588368680473" />
     <state x="454" y="1217" key="SettingsEditor/53.1103.1792.1033/0.23.1920.1057@53.1103.1792.1033" timestamp="1588365897007" />
-    <state x="549" y="1359" key="Vcs.Push.Dialog.v2" timestamp="1588364584725">
-      <screen x="53" y="1103" width="1792" height="1033" />
+    <state x="531" y="285" key="Vcs.Push.Dialog.v2" timestamp="1588368397016">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
+    <state x="531" y="285" key="Vcs.Push.Dialog.v2/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588368397016" />
     <state x="549" y="1359" key="Vcs.Push.Dialog.v2/53.1103.1792.1033/0.23.1920.1057@53.1103.1792.1033" timestamp="1588364584725" />
     <state x="614" y="390" key="com.intellij.ide.util.TipDialog" timestamp="1588366972110">
       <screen x="0" y="23" width="1920" height="1057" />
@@ -469,6 +506,10 @@
     </state>
     <state x="554" y="195" width="749" height="729" key="find.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1583360951520" />
     <state x="594" y="207" width="803" height="688" key="find.popup/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588368092206" />
+    <state x="723" y="267" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588368712595">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="723" y="267" key="git4idea.branch.GitSmartOperationDialog/53.1103.1792.1028/0.23.1920.1057@0.23.1920.1057" timestamp="1588368712595" />
     <state x="602" y="173" key="refactoring.ChangeSignatureDialog" timestamp="1583360561066">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
