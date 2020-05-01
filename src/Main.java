@@ -63,7 +63,7 @@ public class Main extends PApplet {
                     String[] split = line.split("=");
                     String command = split[0].trim();
                     String parameter = split[1].trim();
-                    if(command.equals("Debug")){
+                    if(command.toLowerCase().equals("Debug")){
                         if(parameter.toLowerCase().equals("false")){
                             return false;
                         }
